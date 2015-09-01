@@ -31,11 +31,37 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
+import "models"
+import "utils/Database.js" as Database
 
 ApplicationWindow
 {
-    initialPage: Component { FirstPage { } }
+    id: mainwindow
+    allowedOrientations: defaultAllowedOrientations
+
+    initialPage: Component { BookmarksPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
+
+    property alias settings: settings
+
+    Settings
+    {
+        id: settings
+
+        Component.onCompleted: {
+            Database.load();
+            Database.transaction(function(tx) {
+                    var ocUrl = Database.transactionGet(tx, "ocUrl");
+                    settings.ocUrl = (ocUrl === false ? "http:\/\/" : ocUrl);
+
+                    var ocUsername = Database.transactionGet(tx, "ocUsername");
+                    settings.ocUsername = (ocUsername === false ? "" : ocUsername);
+
+                    var ocPassword = Database.transactionGet(tx, "ocPassword");
+                    settings.ocPassword = (ocPassword === false ? "" : ocPassword);
+                });
+        }
+    }
 }
 
 
