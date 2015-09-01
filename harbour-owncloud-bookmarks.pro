@@ -18,7 +18,6 @@ SOURCES += src/harbour-owncloud-bookmarks.cpp
 
 OTHER_FILES += qml/harbour-owncloud-bookmarks.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/SecondPage.qml \
     rpm/harbour-owncloud-bookmarks.changes.in \
     rpm/harbour-owncloud-bookmarks.spec \
     rpm/harbour-owncloud-bookmarks.yaml \
@@ -26,7 +25,8 @@ OTHER_FILES += qml/harbour-owncloud-bookmarks.qml \
     harbour-owncloud-bookmarks.desktop \
     qml/models/Settings.qml \
     qml/pages/BookmarksPage.qml \
-    qml/utils/Database.js
+    qml/utils/Database.js \
+    qml/pages/SettingsPage.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
