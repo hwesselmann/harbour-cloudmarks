@@ -24,8 +24,9 @@ import Sailfish.Silica 1.0
 Page {
     id: bookmarksPage
 
-    SilicaFlickable {
+    SilicaListView {
         anchors.fill: parent
+        spacing: Theme.paddingMedium
 
         PullDownMenu {
             MenuItem {
@@ -34,23 +35,83 @@ Page {
             }
         }
 
-        contentHeight: column.height
+        header: PageHeader {
+            title: qsTr("ownCloud Bookmarks")
+        }
 
-        Column {
-            id: column
+        model: ListModel {
+        }
 
-            width: bookmarksPage.width
-            spacing: Theme.paddingLarge
-            PageHeader {
-                title: qsTr("ownCloud Bookmarks")
-            }
-            Label {
-                x: Theme.paddingLarge
-                text: qsTr("Nothing here yet")
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeExtraLarge
+        section {
+            property: 'section'
+
+            delegate: SectionHeader {
+                text: section
+                height: Theme.itemSizeExtraSmall
             }
         }
+
+        VerticalScrollDecorator {}
+
+        delegate: Item {
+            x: Theme.horizontalPageMargin
+            width: parent.width - 2*Theme.horizontalPageMargin
+            height: childrenRect.height
+
+            Label {
+                id: title
+                text: 'Convert Your Ubuntu Phone to an Android Phone'
+                font.pixelSize: Theme.fontSizeSmall
+                wrapMode: Text.WordWrap
+                maximumLineCount: 2
+                truncationMode: TruncationMode.Fade
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    rightMargin: Theme.paddingSmall
+                }
+            }
+
+            Label {
+                id: url
+                text: 'http://a25.co/ubuntu-phone-how-to-install-android/'
+                font.pixelSize: Theme.fontSizeTiny
+                font.italic: true
+                wrapMode: Text.WordWrap
+                maximumLineCount: 2
+                truncationMode: TruncationMode.Fade
+                anchors {
+                    top: title.bottom
+                    left: parent.left
+                    right: parent.right
+                }
+            }
+            Label {
+                id: tags
+                text: 'Android, Ubuntu Phone'
+                font.pixelSize: Theme.fontSizeTiny
+                anchors {
+                    top: url.bottom
+                    topMargin: Theme.paddingSmall
+                    left: parent.left
+                }
+            }
+        }
+
+        Component.onCompleted: {
+            var offsets = [ 0 ]
+            var fileSizes = [ 0 ]
+
+            var now = new Date().getTime()
+            for (var i = 0, fileSize = 0; i < offsets.length; ++i) {
+                var dateTime = new Date(now - offsets[i])
+                model.append({ 'dateTime': dateTime,
+                               'section': Format.formatDate(dateTime, Formatter.TimepointSectionRelative),
+                               'fileSize': Format.formatFileSize(fileSizes[fileSize++]) })
+                fileSize %= fileSizes.length;
+            }
+        }
+
     }
 }
 

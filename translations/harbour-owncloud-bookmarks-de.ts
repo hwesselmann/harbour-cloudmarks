@@ -11,10 +11,6 @@
         <source>ownCloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <source>Nothing here yet</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>CoverPage</name>
