@@ -8,7 +8,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>ownCloud Bookmarks</source>
+        <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

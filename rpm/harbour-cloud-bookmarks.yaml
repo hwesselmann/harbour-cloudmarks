@@ -1,4 +1,4 @@
-Name: harbour-owncloud-bookmarks
+Name: harbour-cloud-bookmarks
 Summary: A native client for the owncloud bookmarks application
 Version: 0.1
 Release: 1
@@ -32,7 +32,7 @@ PkgConfigBR:
 
 # Runtime dependencies which are not automatically detected
 Requires:
-  - sailfishsilica-qt5 >= 0.10.9 
+  - sailfishsilica-qt5 >= 0.10.9
 
 # All installed files
 Files:

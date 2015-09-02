@@ -36,7 +36,7 @@ Page {
         }
 
         header: PageHeader {
-            title: qsTr("ownCloud Bookmarks")
+            title: qsTr("cloud Bookmarks")
         }
 
         model: ListModel {
