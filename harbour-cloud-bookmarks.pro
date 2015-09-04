@@ -27,7 +27,8 @@ OTHER_FILES += qml/harbour-cloud-bookmarks.qml \
     qml/pages/BookmarksPage.qml \
     qml/utils/Database.js \
     qml/pages/SettingsPage.qml \
-    qml/components/BookmarkDelegate.qml
+    qml/components/BookmarkDelegate.qml \
+    qml/models/BookmarkListModel.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line

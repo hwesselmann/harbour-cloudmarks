@@ -18,41 +18,18 @@
 */
 
 import QtQuick 2.1
-import Sailfish.Silica 1.0
-import "../models"
-import "../components"
 
+ListModel
+{
+    id: bookmarkListModel
+    function populate(sqlrows)
+    {
+        bookmarkListModel.clear();
 
-Page {
-    id: bookmarksPage
-
-    property BookmarkListModel bookmarkListModel: BookmarkListModel { }
-
-    SilicaListView {
-        anchors.fill: parent
-        spacing: Theme.paddingMedium
-
-        PullDownMenu {
-            MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"), { "settings": mainwindow.settings})
-            }
-        }
-
-        header: PageHeader {
-            title: qsTr("cloud Bookmarks")
-        }
-
-        model: bookmarkListModel
-
-        VerticalScrollDecorator {}
-
-        delegate: BookmarkDelegate{
-            onClicked: {
-                console.log("Clicked");
-            }
+        for(var li = 0; li < sqlrows.length; li++)
+        {
+            var currentRow = sqlrows[li]
+            bookmarkListModel.append({"url": row.url, "title": row.title, "description": row.description, "tags": row.tags})
         }
     }
 }
-
-
