@@ -1,5 +1,5 @@
 /*
-    ownCloud Bookmarks - A SailfishOS client for the ownCloud Bookmarks application.
+    cloud Bookmarks - A SailfishOS client for the ownCloud Bookmarks application.
     Copyright (C) 2015 Hauke Wesselmann
     Contact: Hauke Wesselmann <hauke@h-dawg.de>
 
@@ -19,6 +19,7 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import "../components"
 
 
 Page {
@@ -53,48 +54,9 @@ Page {
 
         VerticalScrollDecorator {}
 
-        delegate: Item {
-            x: Theme.horizontalPageMargin
-            width: parent.width - 2*Theme.horizontalPageMargin
-            height: childrenRect.height
-
-            Label {
-                id: title
-                text: 'Convert Your Ubuntu Phone to an Android Phone'
-                font.pixelSize: Theme.fontSizeSmall
-                wrapMode: Text.WordWrap
-                maximumLineCount: 2
-                truncationMode: TruncationMode.Fade
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    rightMargin: Theme.paddingSmall
-                }
-            }
-
-            Label {
-                id: url
-                text: 'http://a25.co/ubuntu-phone-how-to-install-android/'
-                font.pixelSize: Theme.fontSizeTiny
-                font.italic: true
-                wrapMode: Text.WordWrap
-                maximumLineCount: 2
-                truncationMode: TruncationMode.Fade
-                anchors {
-                    top: title.bottom
-                    left: parent.left
-                    right: parent.right
-                }
-            }
-            Label {
-                id: tags
-                text: 'Android, Ubuntu Phone'
-                font.pixelSize: Theme.fontSizeTiny
-                anchors {
-                    top: url.bottom
-                    topMargin: Theme.paddingSmall
-                    left: parent.left
-                }
+        delegate: BookmarkDelegate{
+            onClicked: {
+                console.log("Clicked");
             }
         }
 
