@@ -1,5 +1,5 @@
 /*
-    ownCloud Bookmarks - A SailfishOS client for the ownCloud Bookmarks application.
+    cloud Bookmarks - A SailfishOS client for the ownCloud Bookmarks application.
     Copyright (C) 2015 Hauke Wesselmann
     Contact: Hauke Wesselmann <hauke@h-dawg.de>
 
