@@ -26,18 +26,6 @@ CoverBackground {
         anchors.centerIn: parent
         text: qsTr("My Cover")
     }
-
-    CoverActionList {
-        id: coverAction
-
-        CoverAction {
-            iconSource: "image://theme/icon-cover-next"
-        }
-
-        CoverAction {
-            iconSource: "image://theme/icon-cover-pause"
-        }
-    }
 }
 
 
