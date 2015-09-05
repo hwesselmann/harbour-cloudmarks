@@ -47,26 +47,9 @@ ListItem {
         text: description
         font.pixelSize: Theme.fontSizeTiny
         font.italic: true
-        wrapMode: Text.WordWrap
-        maximumLineCount: 3
         truncationMode: TruncationMode.Fade
         anchors {
             top: itemTitle.bottom
-            left: parent.left
-            right: parent.right
-        }
-    }
-
-    Label {
-        id: itemUrl
-        text: url
-        font.pixelSize: Theme.fontSizeTiny
-        font.italic: true
-        wrapMode: Text.WordWrap
-        maximumLineCount: 2
-        truncationMode: TruncationMode.Fade
-        anchors {
-            top: itemDescription.bottom
             left: parent.left
             right: parent.right
         }
@@ -79,9 +62,17 @@ ListItem {
         wrapMode: Text.WordWrap
         maximumLineCount: 2
         anchors {
-            top: itemUrl.bottom
+            top: itemDescription.bottom
             topMargin: Theme.paddingSmall
             left: parent.left
         }
     }
+
+    Separator {
+        anchors.top: itemTags.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.margins: Theme.paddingLarge
+        color: Theme.primaryColor
+   }
 }
