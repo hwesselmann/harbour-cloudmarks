@@ -25,11 +25,25 @@ ListModel
     function populate(rows)
     {
         bookmarkListModel.clear();
-        console.log(rows.length);
         for(var li = 0; li < rows.length; li++)
         {
-            var currentRow = rows[li]
-            bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": currentRow.tags})
+            var currentRow = rows[li];
+            var tags = "";
+            var j = 0;
+            while(currentRow.tags.length > 0 && currentRow.tags.length > j)
+            {
+                if(j > 0)
+                {
+                    tags = tags + ", " + currentRow.tags[j];
+                }
+                else
+                {
+                    tags = currentRow.tags[j];
+                }
+                j++;
+            }
+
+            bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
         }
     }
 }
