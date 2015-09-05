@@ -43,6 +43,21 @@ ListItem {
     }
 
     Label {
+        id: itemDescription
+        text: description
+        font.pixelSize: Theme.fontSizeTiny
+        font.italic: true
+        wrapMode: Text.WordWrap
+        maximumLineCount: 3
+        truncationMode: TruncationMode.Fade
+        anchors {
+            top: itemTitle.bottom
+            left: parent.left
+            right: parent.right
+        }
+    }
+
+    Label {
         id: itemUrl
         text: url
         font.pixelSize: Theme.fontSizeTiny
@@ -51,11 +66,12 @@ ListItem {
         maximumLineCount: 2
         truncationMode: TruncationMode.Fade
         anchors {
-            top: itemTitle.bottom
+            top: itemDescription.bottom
             left: parent.left
             right: parent.right
         }
     }
+
     Label {
         id: itemTags
         text: tags
