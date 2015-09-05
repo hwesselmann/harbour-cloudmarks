@@ -58,7 +58,7 @@ Page {
     }
 
     function loadBookmarksFromServer() {
-        var response = JSON.parse('{"title": "Convert Your Ubuntu Phone to an Android Phone"", "url": "http://a25.co/ubuntu-phone-how-to-install-android/"", "description": "", "tags": "Android, Ubuntu Phone" }');
+        var response = JSON.parse('{"title": "Convert Your Ubuntu Phone to an Android Phone", "tags" : "Android, Ubuntu Phone", "url": "http:\/\/www.example.com\/" }');
         bookmarkListModel.append(response);
     }
 }

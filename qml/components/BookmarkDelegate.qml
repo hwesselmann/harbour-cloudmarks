@@ -51,7 +51,7 @@ ListItem {
         maximumLineCount: 2
         truncationMode: TruncationMode.Fade
         anchors {
-            top: title.bottom
+            top: itemTitle.bottom
             left: parent.left
             right: parent.right
         }
@@ -60,8 +60,10 @@ ListItem {
         id: itemTags
         text: tags
         font.pixelSize: Theme.fontSizeTiny
+        wrapMode: Text.WordWrap
+        maximumLineCount: 2
         anchors {
-            top: url.bottom
+            top: itemUrl.bottom
             topMargin: Theme.paddingSmall
             left: parent.left
         }
