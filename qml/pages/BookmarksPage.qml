@@ -22,7 +22,6 @@ import Sailfish.Silica 1.0
 import "../models"
 import "../components"
 
-
 Page {
     id: bookmarksPage
 
@@ -36,6 +35,10 @@ Page {
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"), { "settings": mainwindow.settings})
+            }
+            MenuItem {
+                text: qsTr("Reload from server")
+                onClicked: loadBookmarksFromServer();
             }
         }
 
@@ -52,6 +55,11 @@ Page {
                 console.log("Clicked");
             }
         }
+    }
+
+    function loadBookmarksFromServer() {
+        var response = JSON.parse('{"title": "Convert Your Ubuntu Phone to an Android Phone"", "url": "http://a25.co/ubuntu-phone-how-to-install-android/"", "description": "", "tags": "Android, Ubuntu Phone" }');
+        bookmarkListModel.append(response);
     }
 }
 

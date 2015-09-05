@@ -29,8 +29,8 @@ ListItem {
     height: childrenRect.height
 
     Label {
-        id: title
-        text: 'Convert Your Ubuntu Phone to an Android Phone'
+        id: itemTitle
+        text: title
         font.pixelSize: Theme.fontSizeSmall
         wrapMode: Text.WordWrap
         maximumLineCount: 2
@@ -43,8 +43,8 @@ ListItem {
     }
 
     Label {
-        id: url
-        text: 'http://a25.co/ubuntu-phone-how-to-install-android/'
+        id: itemUrl
+        text: url
         font.pixelSize: Theme.fontSizeTiny
         font.italic: true
         wrapMode: Text.WordWrap
@@ -57,8 +57,8 @@ ListItem {
         }
     }
     Label {
-        id: tags
-        text: 'Android, Ubuntu Phone'
+        id: itemTags
+        text: tags
         font.pixelSize: Theme.fontSizeTiny
         anchors {
             top: url.bottom

@@ -4,12 +4,17 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="33"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="36"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="39"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="40"/>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksPage.qml" line="46"/>
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17,7 +22,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="38"/>
+        <location filename="../qml/cover/CoverPage.qml" line="27"/>
         <source>My Cover</source>
         <translation type="unfinished"></translation>
     </message>

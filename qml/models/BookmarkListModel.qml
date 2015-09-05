@@ -22,14 +22,14 @@ import QtQuick 2.1
 ListModel
 {
     id: bookmarkListModel
-    function populate(sqlrows)
+    function populate(rows)
     {
         bookmarkListModel.clear();
-
-        for(var li = 0; li < sqlrows.length; li++)
+        console.log(rows.length);
+        for(var li = 0; li < rows.length; li++)
         {
-            var currentRow = sqlrows[li]
-            bookmarkListModel.append({"url": row.url, "title": row.title, "description": row.description, "tags": row.tags})
+            var currentRow = rows[li]
+            bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": currentRow.tags})
         }
     }
 }

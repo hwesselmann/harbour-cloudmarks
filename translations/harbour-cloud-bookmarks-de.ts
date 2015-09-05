@@ -11,6 +11,10 @@
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
