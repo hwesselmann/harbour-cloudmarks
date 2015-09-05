@@ -29,7 +29,7 @@ Page {
 
     SilicaListView {
         anchors.fill: parent
-        spacing: Theme.paddingMedium
+        spacing: 90
 
         PullDownMenu {
             MenuItem {
@@ -58,8 +58,22 @@ Page {
     }
 
     function loadBookmarksFromServer() {
-        var response = JSON.parse('{"title": "Convert Your Ubuntu Phone to an Android Phone", "tags" : "Android, Ubuntu Phone", "url": "http:\/\/www.example.com\/" }');
-        bookmarkListModel.append(response);
+
+        request(mainwindow.settings.ocUrl + '/index.php/apps/bookmarks/public/rest/v1/bookmark?user=' + mainwindow.settings.ocUsername + '&password=' + mainwindow.settings.ocPassword + '&select[0]=tags&select[1]=description', function (o) {
+            var response = JSON.parse(o.responseText);
+            bookmarkListModel.populate(response);
+        });
+    }
+
+    function request(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = (function(myxhr) {
+            return function() {
+                callback(myxhr);
+            }
+        })(xhr);
+        xhr.open('GET', url, true);
+        xhr.send('');
     }
 }
 
