@@ -37,7 +37,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"), { "settings": mainwindow.settings})
             }
             MenuItem {
-                text: qsTr("Reload from server")
+                text: qsTr("Load from server")
                 onClicked: loadBookmarksFromServer();
             }
         }

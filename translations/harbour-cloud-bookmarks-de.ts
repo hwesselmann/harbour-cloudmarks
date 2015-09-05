@@ -5,22 +5,22 @@
     <name>BookmarksPage</name>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>cloud Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>coud Bookmarks</translation>
     </message>
     <message>
         <source>Reload from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu laden</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
-        <source>My Cover</source>
-        <translation>Mein Cover</translation>
+        <source>Cover</source>
+        <translation>cloud Bookmarks</translation>
     </message>
 </context>
 </TS>

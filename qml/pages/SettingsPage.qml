@@ -60,7 +60,7 @@ Dialog {
             DialogHeader
             {
                 id: dlgheader
-                acceptText: "Save Settings"
+                acceptText: qsTr("Save Settings")
             }
 
             TextField
