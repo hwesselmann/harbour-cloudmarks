@@ -21,7 +21,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "pages"
 import "models"
-import "utils/Database.js" as Database
+import "utils/SettingsDatabase.js" as SettingsDatabase
 
 ApplicationWindow
 {
@@ -40,13 +40,13 @@ ApplicationWindow
         Component.onCompleted: {
             Database.load();
             Database.transaction(function(tx) {
-                    var ocUrl = Database.transactionGet(tx, "ocUrl");
+                    var ocUrl = SettingsDatabase.transactionGet(tx, "ocUrl");
                     settings.ocUrl = (ocUrl === false ? "http:\/\/" : ocUrl);
 
-                    var ocUsername = Database.transactionGet(tx, "ocUsername");
+                    var ocUsername = SettingsDatabase.transactionGet(tx, "ocUsername");
                     settings.ocUsername = (ocUsername === false ? "" : ocUsername);
 
-                    var ocPassword = Database.transactionGet(tx, "ocPassword");
+                    var ocPassword = SettingsDatabase.transactionGet(tx, "ocPassword");
                     settings.ocPassword = (ocPassword === false ? "" : ocPassword);
                 });
         }

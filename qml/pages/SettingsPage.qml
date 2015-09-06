@@ -20,7 +20,7 @@
 import QtQuick 2.1
 import Sailfish.Silica 1.0
 import "../models"
-import "../utils/Database.js" as Database
+import "../utils/SettingsDatabase.js" as SettingsDatabase
 
 Dialog {
     id: settingsPage
@@ -36,10 +36,10 @@ Dialog {
         settings.ocUsername = ocUsernameTF.text;
         settings.ocPassword = ocPasswordTF.text;
 
-        Database.transaction(function(tx) {
-            Database.transactionSet(tx, "ocUrl", settings.ocUrl);
-            Database.transactionSet(tx, "ocUsername", settings.ocUsername);
-            Database.transactionSet(tx, "ocPassword", settings.ocPassword);
+        SettingsDatabase.transaction(function(tx) {
+            SettingsDatabase.transactionSet(tx, "ocUrl", settings.ocUrl);
+            SettingsDatabase.transactionSet(tx, "ocUsername", settings.ocUsername);
+            SettingsDatabase.transactionSet(tx, "ocPassword", settings.ocPassword);
         });
     }
 
