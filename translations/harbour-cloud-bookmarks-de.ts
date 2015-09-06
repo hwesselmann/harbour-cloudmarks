@@ -19,6 +19,10 @@
         <source>Opening link in web browser</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

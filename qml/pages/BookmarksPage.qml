@@ -28,8 +28,19 @@ Page {
     property BookmarkListModel bookmarkListModel: BookmarkListModel { }
 
     SilicaListView {
+        id: bookmarkList
         anchors.fill: parent
         spacing: 90
+        opacity: busyIndicator.running ? 0.5 : 1.0
+
+        Behavior on opacity {
+            NumberAnimation { duration: 300 }
+        }
+
+        ViewPlaceholder {
+            enabled: (bookmarkList.count === 0) && (busyIndicator.running === false)
+            text: qsTr("Nothing here? Visit the settings page and then load bookmarks from your server.")
+        }
 
         PullDownMenu {
             MenuItem {
@@ -38,7 +49,11 @@ Page {
             }
             MenuItem {
                 text: qsTr("Load from server")
-                onClicked: loadBookmarksFromServer();
+                onClicked: {
+                    busyIndicator.running = true
+                    busyIndicator.visible = true
+                    loadBookmarksFromServer();
+                }
             }
         }
 
@@ -58,11 +73,20 @@ Page {
         }
     }
 
+    BusyIndicator {
+        id: busyIndicator
+        anchors.centerIn: parent
+        running: false
+        size: BusyIndicatorSize.Large
+    }
+
     function loadBookmarksFromServer() {
 
         request(mainwindow.settings.ocUrl + '/index.php/apps/bookmarks/public/rest/v1/bookmark?user=' + mainwindow.settings.ocUsername + '&password=' + mainwindow.settings.ocPassword + '&select[0]=tags&select[1]=description', function (o) {
             var response = JSON.parse(o.responseText);
             bookmarkListModel.populate(response);
+            busyIndicator.running = false
+            busyIndicator.visible = false
         });
     }
 
