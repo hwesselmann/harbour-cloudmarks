@@ -52,7 +52,7 @@ Page {
 
         delegate: BookmarkDelegate{
             onClicked: {
-                console.log("Clicked");
+                this.openLink();
             }
         }
     }

@@ -74,5 +74,9 @@ ListItem {
         anchors.right: parent.right
         anchors.margins: Theme.paddingLarge
         color: Theme.primaryColor
-   }
+    }
+
+    function openLink() {
+        Qt.openUrlExternally(url);
+    }
 }

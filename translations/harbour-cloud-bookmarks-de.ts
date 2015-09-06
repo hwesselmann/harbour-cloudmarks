@@ -12,15 +12,22 @@
         <translation>coud Bookmarks</translation>
     </message>
     <message>
-        <source>Reload from server</source>
-        <translation>Neu laden</translation>
+        <source>Load from server</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
-        <source>Cover</source>
-        <translation>cloud Bookmarks</translation>
+        <source>My Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <source>Save Settings</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

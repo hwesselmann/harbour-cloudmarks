@@ -10,7 +10,7 @@
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="40"/>
-        <source>Reload from server</source>
+        <source>Load from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -23,7 +23,15 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="27"/>
-        <source>Cover</source>
+        <source>My Cover</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SettingsPage</name>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="63"/>
+        <source>Save Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
