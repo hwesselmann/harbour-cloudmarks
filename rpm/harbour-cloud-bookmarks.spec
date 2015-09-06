@@ -13,11 +13,11 @@ Name:       harbour-cloud-bookmarks
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    A native client for the owncloud bookmarks application
-Version:    0.1
+Version:    0.2
 Release:    1
-Group:      Qt/Qt
-License:    LICENSE
-URL:        http://example.org/
+Group:      Applications/Network
+License:    LGPL v3
+URL:        https://github.com/hwesselmann/harbour-cloud-bookmarks
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-cloud-bookmarks.yaml
 Requires:   sailfishsilica-qt5 >= 0.10.9
@@ -28,7 +28,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Short description of my SailfishOS Application
+A native client for the owncloud bookmarks application
 
 
 %prep
