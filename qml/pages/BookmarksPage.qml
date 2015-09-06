@@ -53,6 +53,7 @@ Page {
         delegate: BookmarkDelegate{
             onClicked: {
                 this.openLink();
+                infoBanner.showText(qsTr("Opening link in web browser"));
             }
         }
     }

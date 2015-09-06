@@ -38,8 +38,8 @@ ApplicationWindow
         id: settings
 
         Component.onCompleted: {
-            Database.load();
-            Database.transaction(function(tx) {
+            SettingsDatabase.load();
+            SettingsDatabase.transaction(function(tx) {
                     var ocUrl = SettingsDatabase.transactionGet(tx, "ocUrl");
                     settings.ocUrl = (ocUrl === false ? "http:\/\/" : ocUrl);
 
@@ -49,6 +49,53 @@ ApplicationWindow
                     var ocPassword = SettingsDatabase.transactionGet(tx, "ocPassword");
                     settings.ocPassword = (ocPassword === false ? "" : ocPassword);
                 });
+        }
+    }
+
+    Rectangle {
+        id: infoBanner
+
+        width: parent.width
+        height: infoText.height + 2 * Theme.paddingMedium
+
+        color: Theme.highlightBackgroundColor
+        opacity: 0.0
+        // On top of everything
+        z: 1
+        visible: opacity > 0.0
+
+        function showText(text) {
+            infoText.text = text
+            opacity = 0.9
+            console.log("INFO: " + text)
+            closeTimer.restart()
+        }
+
+        Label {
+            id: infoText
+            anchors.top: parent.top
+            anchors.topMargin: Theme.paddingMedium
+            x: Theme.paddingMedium
+            width: parent.width - 2 * Theme.paddingMedium
+            color: Theme.highlightColor
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+        }
+
+        Behavior on opacity { FadeAnimation {} }
+
+        Timer {
+            id: closeTimer
+            interval: 3000
+            onTriggered: infoBanner.opacity = 0.0
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                closeTimer.stop()
+                infoBanner.opacity = 0.0
+            }
         }
     }
 }

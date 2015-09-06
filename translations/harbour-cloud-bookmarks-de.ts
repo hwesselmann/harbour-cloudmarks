@@ -15,6 +15,10 @@
         <source>Load from server</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Opening link in web browser</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

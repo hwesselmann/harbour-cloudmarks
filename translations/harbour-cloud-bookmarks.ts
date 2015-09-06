@@ -18,6 +18,11 @@
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../qml/pages/BookmarksPage.qml" line="56"/>
+        <source>Opening link in web browser</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
