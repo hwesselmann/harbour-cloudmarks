@@ -9,33 +9,33 @@
     </message>
     <message>
         <source>cloud Bookmarks</source>
-        <translation>coud Bookmarks</translation>
+        <translation>cloud Bookmarks</translation>
     </message>
     <message>
         <source>Load from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu laden</translation>
     </message>
     <message>
         <source>Opening link in web browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Öffne Link im Browser</translation>
     </message>
     <message>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation type="unfinished"></translation>
+        <translation> Keine Lesezeichen zu sehen? Gehe zu den Einstellungen und lade dann die Lesezeichen von Deinem Server.</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
-        <source>My Cover</source>
-        <translation type="unfinished"></translation>
+        <source>cloudMarks</source>
+        <translation>cloudMarks</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
         <source>Save Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern</translation>
     </message>
 </context>
 </TS>

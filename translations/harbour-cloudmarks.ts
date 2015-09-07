@@ -33,7 +33,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="27"/>
-        <source>My Cover</source>
+        <source>cloudMarks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
