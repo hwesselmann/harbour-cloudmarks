@@ -31,7 +31,7 @@ ListItem {
     Label {
         id: itemTitle
         text: title
-        font.pixelSize: Theme.fontSizeSmall
+        font.pixelSize: Theme.fontSizeMedium
         wrapMode: Text.WordWrap
         maximumLineCount: 2
         truncationMode: TruncationMode.Fade
@@ -45,7 +45,7 @@ ListItem {
     Label {
         id: itemDescription
         text: description
-        font.pixelSize: Theme.fontSizeTiny
+        font.pixelSize: Theme.fontSizeSmall
         font.italic: true
         truncationMode: TruncationMode.Fade
         anchors {
@@ -58,7 +58,7 @@ ListItem {
     Label {
         id: itemTags
         text: tags
-        font.pixelSize: Theme.fontSizeTiny
+        font.pixelSize: Theme.fontSizeSmall
         wrapMode: Text.WordWrap
         maximumLineCount: 2
         anchors {
