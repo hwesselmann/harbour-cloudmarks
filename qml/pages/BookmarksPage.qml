@@ -36,7 +36,7 @@ Page {
     SilicaListView {
         id: bookmarkList
         anchors.fill: parent
-        spacing: 90
+        spacing: 110
         opacity: busyIndicator.running ? 0.5 : 1.0
 
         Behavior on opacity {
