@@ -27,8 +27,15 @@ function storeBookmarks(rows)
     for(var li = 0; li < rows.length; li++)
     {
         var currentRow = rows[li];
+        var tags = "";
+        // in owncloud, tags names cannot contain a comma, so we can check if we are dealing with a json response
+        // by checking for commas
+        if(currentRow.tags)
+        {
+            tags = currentRow.tags.toString().replace(',', ', ');
+        }
 
-        storeBookmark(db, currentRow.title, currentRow.description, currentRow.url, currentRow.tags.toString());
+        storeBookmark(db, currentRow.title, currentRow.description, currentRow.url, tags);
     }
 }
 

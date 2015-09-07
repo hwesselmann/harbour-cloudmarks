@@ -92,7 +92,7 @@ Page {
             var response = JSON.parse(o.responseText);
             BookmarkDatabase.clear();
             BookmarkDatabase.storeBookmarks(response);
-            bookmarkListModel.populate(o.responseText);
+            bookmarkListModel.populate(response);
             busyIndicator.running = false
             busyIndicator.visible = false
         });

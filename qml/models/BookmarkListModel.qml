@@ -31,9 +31,9 @@ ListModel
             var tags = "";
             // in owncloud, tags names cannot contain a comma, so we can check if we are dealing with a json response
             // by checking for commas
-            if(currentRow.tags && currentRow.tags.indexOf(',') > 0)
+            if(currentRow.tags && currentRow.tags.indexOf(',') < 0)
             {
-                tags = currentRow.tags.toString();
+                tags = currentRow.tags.toString().replace(',', ', ');
             }
             else
             {
