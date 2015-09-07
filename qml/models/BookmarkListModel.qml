@@ -23,24 +23,21 @@ ListModel
 {
     id: bookmarkListModel
     function populate(rows)
-    {
+    {   
         bookmarkListModel.clear();
         for(var li = 0; li < rows.length; li++)
         {
             var currentRow = rows[li];
             var tags = "";
-            var j = 0;
-            while(currentRow.tags.length > 0 && currentRow.tags.length > j)
+            // in owncloud, tags names cannot contain a comma, so we can check if we are dealing with a json response
+            // by checking for commas
+            if(currentRow.tags && currentRow.tags.indexOf(',') > 0)
             {
-                if(j > 0)
-                {
-                    tags = tags + ", " + currentRow.tags[j];
-                }
-                else
-                {
-                    tags = currentRow.tags[j];
-                }
-                j++;
+                tags = currentRow.tags.toString();
+            }
+            else
+            {
+                tags = currentRow.tags;
             }
 
             bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})

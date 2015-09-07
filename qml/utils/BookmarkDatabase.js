@@ -20,9 +20,20 @@ function clear()
     load();
 }
 
-function storeBookmark(title, description, url, tags)
+function storeBookmarks(rows)
 {
     var db = instance();
+
+    for(var li = 0; li < rows.length; li++)
+    {
+        var currentRow = rows[li];
+
+        storeBookmark(db, currentRow.title, currentRow.description, currentRow.url, currentRow.tags.toString());
+    }
+}
+
+function storeBookmark(db, title, description, url, tags)
+{
     db.transaction(function(tx) {
         tx.executeSql("INSERT INTO Bookmarks (url, title, description, tags) VALUES (?, ?, ?, ?);", [url, title, description, tags]);
     });

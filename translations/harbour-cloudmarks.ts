@@ -4,27 +4,27 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="42"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="48"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="47"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="53"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="51"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="57"/>
         <source>Load from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="61"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="71"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="77"/>
         <source>Opening link in web browser</source>
         <translation type="unfinished"></translation>
     </message>

@@ -21,11 +21,17 @@ import QtQuick 2.1
 import Sailfish.Silica 1.0
 import "../models"
 import "../components"
+import "../utils/BookmarkDatabase.js" as BookmarkDatabase
 
 Page {
     id: bookmarksPage
 
-    property BookmarkListModel bookmarkListModel: BookmarkListModel { }
+    property BookmarkListModel bookmarkListModel: BookmarkListModel {
+        Component.onCompleted: {
+            BookmarkDatabase.load();
+            BookmarkDatabase.queryBookmarks(this);
+        }
+    }
 
     SilicaListView {
         id: bookmarkList
@@ -84,7 +90,9 @@ Page {
 
         request(mainwindow.settings.ocUrl + '/index.php/apps/bookmarks/public/rest/v1/bookmark?user=' + mainwindow.settings.ocUsername + '&password=' + mainwindow.settings.ocPassword + '&select[0]=tags&select[1]=description', function (o) {
             var response = JSON.parse(o.responseText);
-            bookmarkListModel.populate(response);
+            BookmarkDatabase.clear();
+            BookmarkDatabase.storeBookmarks(response);
+            bookmarkListModel.populate(o.responseText);
             busyIndicator.running = false
             busyIndicator.visible = false
         });
