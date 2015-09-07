@@ -10,19 +10,19 @@
 #   - translation filenames have to be changed
 
 # The name of your application
-TARGET = harbour-cloud-bookmarks
+TARGET = harbour-cloudmarks
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-cloud-bookmarks.cpp
+SOURCES += src/harbour-cloudmarks.cpp
 
-OTHER_FILES += qml/harbour-cloud-bookmarks.qml \
+OTHER_FILES += qml/harbour-cloudmarks.qml \
     qml/cover/CoverPage.qml \
-    rpm/harbour-cloud-bookmarks.changes.in \
-    rpm/harbour-cloud-bookmarks.spec \
-    rpm/harbour-cloud-bookmarks.yaml \
+    rpm/harbour-cloudmarks.changes.in \
+    rpm/harbour-cloudmarks.spec \
+    rpm/harbour-cloudmarks.yaml \
     translations/*.ts \
-    harbour-cloud-bookmarks.desktop \
+    harbour-cloudmarks.desktop \
     qml/models/Settings.qml \
     qml/pages/BookmarksPage.qml \
     qml/pages/SettingsPage.qml \
@@ -39,5 +39,5 @@ CONFIG += sailfishapp_i18n
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-cloud-bookmarks-de.ts
+TRANSLATIONS += translations/harbour-cloudmarks-de.ts
 
