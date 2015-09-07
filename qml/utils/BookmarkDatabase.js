@@ -10,48 +10,44 @@ function openDatabase(version)
 {
     return Storage.LocalStorage.openDatabaseSync("ocBookmarksStorageDB", version, "ownCloud Bookmarks offline storage database", 5000000);
 }
-function set(setting, value)
+
+function clear()
+{
+    instance().transaction(function(tx) {
+        tx.executeSql("DROP TABLE IF EXISTS Bookmarks");
+    });
+
+    load();
+}
+
+function storeBookmark(title, description, url, tags)
 {
     var db = instance();
-
     db.transaction(function(tx) {
-        transactionSet(tx, setting, value);
+        tx.executeSql("INSERT INTO Bookmarks (url, title, description, tags) VALUES (?, ?, ?, ?);", [url, title, description, tags]);
     });
 }
 
-function get(setting)
+function queryBookmarks(model)
 {
-    var db = instance();
-    var res = false;
+    model.clear();
 
-    db.readTransaction(function(tx) {
-        res = transactionGet(tx, setting);
+    instance().transaction(function(tx) {
+        var res = tx.executeSql("SELECT * FROM Bookmarks")
+
+        model.clear();
+        if(res.rows.length)
+        {
+            model.populate(res.rows);
+        }
     });
-
-    return res;
-}
-
-function transactionSet(tx, setting, value)
-{
-    tx.executeSql("INSERT OR REPLACE INTO Settings (name, value) VALUES (?, ?);", [setting, value]);
-}
-
-function transactionGet(tx, setting)
-{
-    var r = tx.executeSql("SELECT value FROM Settings WHERE name = ?;", [setting]);
-
-    if(r.rows.length > 0)
-        return r.rows.item(0).value;
-
-    return false;
 }
 
 function load()
 {
     var db = instance();
-
     db.transaction(function(tx) {
-        tx.executeSql("CREATE TABLE IF NOT EXISTS Settings(name TEXT PRIMARY KEY, value TEXT)");
+        tx.executeSql("CREATE TABLE IF NOT EXISTS Bookmarks(url TEXT PRIMARY KEY, title TEXT, description TEXT, tags TEXT)");
     });
 }
 
@@ -59,4 +55,3 @@ function transaction(txfunc)
 {
     instance().transaction(txfunc);
 }
-
