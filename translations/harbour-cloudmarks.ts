@@ -19,12 +19,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="65"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BookmarksPage.qml" line="71"/>
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="77"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="81"/>
         <source>Opening link in web browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34,6 +39,24 @@
     <message>
         <location filename="../qml/cover/CoverPage.qml" line="27"/>
         <source>cloudMarks</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SearchPage</name>
+    <message>
+        <location filename="../qml/pages/SearchPage.qml" line="43"/>
+        <source>Enter a search term to filter your bookmarks by tag.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SearchPage.qml" line="47"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SearchPage.qml" line="57"/>
+        <source>Opening link in web browser</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

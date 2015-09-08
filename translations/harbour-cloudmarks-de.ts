@@ -23,12 +23,31 @@
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
         <translation> Keine Lesezeichen zu sehen? Gehe zu den Einstellungen und lade dann die Lesezeichen von Deinem Server.</translation>
     </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>cloudMarks</source>
         <translation>cloudMarks</translation>
+    </message>
+</context>
+<context>
+    <name>SearchPage</name>
+    <message>
+        <source>Enter a search term to filter your bookmarks by tag.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Opening link in web browser</source>
+        <translation type="unfinished">Öffne Link im Browser</translation>
     </message>
 </context>
 <context>
