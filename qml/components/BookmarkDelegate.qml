@@ -57,7 +57,16 @@ ListItem {
                 right: parent.right
                  margins: Theme.paddingLarge
             }
-             visible: description
+            visible: description
+        }
+
+        Separator {
+            anchors {
+                left: parent.left
+                right: parent.right
+                margins: Theme.paddingLarge
+            }
+            color: Theme.primaryColor
         }
 
         Label {
@@ -72,13 +81,6 @@ ListItem {
                 margins: Theme.paddingLarge
             }
             visible: tags
-        }
-
-        Separator {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.margins: Theme.paddingLarge
-            color: Theme.primaryColor
         }
    }
 
