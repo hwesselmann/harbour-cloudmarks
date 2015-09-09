@@ -98,7 +98,6 @@ Dialog {
                 text: settings.ocPassword
                 EnterKey.enabled: text.length > 0
                 EnterKey.onClicked: {
-                    acceptSettings();
                     parent.focus = true;
                 }
             }
