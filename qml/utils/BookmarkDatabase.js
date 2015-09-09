@@ -46,7 +46,7 @@ function storeBookmark(db, title, description, url, tags)
     });
 }
 
-function queryBookmarks(model)
+function queryBookmarks(model, searchTerm)
 {
     model.clear();
 
@@ -56,7 +56,7 @@ function queryBookmarks(model)
         model.clear();
         if(res.rows.length)
         {
-            model.populate(res.rows);
+            model.populate(res.rows, searchTerm);
         }
     });
 }

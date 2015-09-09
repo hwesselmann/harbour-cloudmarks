@@ -28,23 +28,23 @@ Page {
 
     property BookmarkListModel bookmarkListModel: BookmarkListModel { }
 
+    property string searchTerm: ""
+
     SilicaListView {
-        id: bookmarkSearchResultList
         anchors.fill: parent
-        spacing: 110
-        opacity: busyIndicator.running ? 0.5 : 1.0
+        spacing: Theme.paddingLarge
+        quickScroll: true
 
-        Behavior on opacity {
-            NumberAnimation { duration: 300 }
-        }
+        header: SearchField {
+            width: parent.width
+            text: searchTerm
+            placeholderText: qsTr("Search by tag")
+            EnterKey.enabled: text.length > 0
+            EnterKey.onClicked: {
+                parent.focus = true;
+                filterBookmarksBySearchTerm(this.text);
+            }
 
-        ViewPlaceholder {
-            enabled: (bookmarkList.count === 0) && (busyIndicator.running === false)
-            text: qsTr("Enter a search term to filter your bookmarks by tag.")
-        }
-
-        header: PageHeader {
-            title: qsTr("Search")
         }
 
         model: bookmarkListModel
@@ -59,10 +59,9 @@ Page {
         }
     }
 
-    BusyIndicator {
-        id: busyIndicator
-        anchors.centerIn: parent
-        running: false
-        size: BusyIndicatorSize.Large
+    function filterBookmarksBySearchTerm(searchTerm) {
+        searchTerm = searchTerm;
+        BookmarkDatabase.load();
+        BookmarkDatabase.queryBookmarks(bookmarkListModel, searchTerm);
     }
 }

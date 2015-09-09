@@ -45,13 +45,8 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="43"/>
-        <source>Enter a search term to filter your bookmarks by tag.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SearchPage.qml" line="47"/>
-        <source>Search</source>
+        <location filename="../qml/pages/SearchPage.qml" line="41"/>
+        <source>Search by tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

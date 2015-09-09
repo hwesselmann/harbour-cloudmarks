@@ -22,7 +22,7 @@ import QtQuick 2.1
 ListModel
 {
     id: bookmarkListModel
-    function populate(rows)
+    function populate(rows, searchTerm)
     {   
         bookmarkListModel.clear();
         for(var li = 0; li < rows.length; li++)
@@ -35,12 +35,22 @@ ListModel
             {
                 tags = currentRow.tags.toString().replace(',', ', ');
             }
-            else
+            else if(currentRow.tags)
             {
                 tags = currentRow.tags;
             }
+            if(searchTerm.length <= 0)
+            {
+                bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
+            }
+            else
+            {
+                if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) > 0)
+                {
+                    bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
+                }
+            }
 
-            bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
         }
     }
 }

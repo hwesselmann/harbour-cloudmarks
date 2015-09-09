@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
@@ -38,16 +38,12 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <source>Enter a search term to filter your bookmarks by tag.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Opening link in web browser</source>
-        <translation type="unfinished">Öffne Link im Browser</translation>
+        <translation>Öffne Link im Browser</translation>
+    </message>
+    <message>
+        <source>Search by tag</source>
+        <translation>Suche nach Tags</translation>
     </message>
 </context>
 <context>

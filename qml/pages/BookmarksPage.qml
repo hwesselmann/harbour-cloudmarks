@@ -29,7 +29,7 @@ Page {
     property BookmarkListModel bookmarkListModel: BookmarkListModel {
         Component.onCompleted: {
             BookmarkDatabase.load();
-            BookmarkDatabase.queryBookmarks(this);
+            BookmarkDatabase.queryBookmarks(this, "");
         }
     }
 
