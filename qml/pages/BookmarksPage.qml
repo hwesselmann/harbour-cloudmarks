@@ -36,8 +36,9 @@ Page {
     SilicaListView {
         id: bookmarkList
         anchors.fill: parent
-        spacing: 110
+        spacing: Theme.paddingLarge
         opacity: busyIndicator.running ? 0.5 : 1.0
+        quickScroll: true
 
         Behavior on opacity {
             NumberAnimation { duration: 300 }

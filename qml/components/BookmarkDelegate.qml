@@ -24,57 +24,63 @@ import "../models"
 
 ListItem {
     id: bookmarkDelegate
-    x: Theme.horizontalPageMargin
-    width: parent.width - 2*Theme.horizontalPageMargin
-    height: childrenRect.height
+    contentHeight: delegateColumn.height
 
-    Label {
-        id: itemTitle
-        text: title
-        font.pixelSize: Theme.fontSizeMedium
-        wrapMode: Text.WordWrap
-        maximumLineCount: 2
-        truncationMode: TruncationMode.Fade
-        anchors {
-            left: parent.left
-            right: parent.right
-            rightMargin: Theme.paddingSmall
+    Column
+   {
+       id: delegateColumn
+       width: parent.width
+       spacing: 5
+
+        Label {
+            id: itemTitle
+            text: title
+            font.pixelSize: Theme.fontSizeMedium
+            wrapMode: Text.WordWrap
+            maximumLineCount: 2
+            truncationMode: TruncationMode.Fade
+            anchors {
+                left: parent.left
+                right: parent.right
+                margins: Theme.paddingLarge
+            }
         }
-    }
 
-    Label {
-        id: itemDescription
-        text: description
-        font.pixelSize: Theme.fontSizeSmall
-        font.italic: true
-        truncationMode: TruncationMode.Fade
-        anchors {
-            top: itemTitle.bottom
-            left: parent.left
-            right: parent.right
+        Label {
+            id: itemDescription
+            text: description
+            font.pixelSize: Theme.fontSizeSmall
+            font.italic: true
+            truncationMode: TruncationMode.Fade
+            anchors {
+                left: parent.left
+                right: parent.right
+                 margins: Theme.paddingLarge
+            }
+             visible: description
         }
-    }
 
-    Label {
-        id: itemTags
-        text: tags
-        font.pixelSize: Theme.fontSizeSmall
-        wrapMode: Text.WordWrap
-        maximumLineCount: 2
-        anchors {
-            top: itemDescription.bottom
-            topMargin: Theme.paddingSmall
-            left: parent.left
+        Label {
+            id: itemTags
+            text: tags
+            font.pixelSize: Theme.fontSizeSmall
+            wrapMode: Text.WordWrap
+            maximumLineCount: 2
+            anchors {
+                left: parent.left
+                right: parent.right
+                margins: Theme.paddingLarge
+            }
+            visible: tags
         }
-    }
 
-    Separator {
-        anchors.top: itemTags.bottom
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.margins: Theme.paddingLarge
-        color: Theme.primaryColor
-    }
+        Separator {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: Theme.paddingLarge
+            color: Theme.primaryColor
+        }
+   }
 
     function openLink() {
         Qt.openUrlExternally(url);

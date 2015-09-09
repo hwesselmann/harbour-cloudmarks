@@ -4,32 +4,32 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="48"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="49"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="53"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="54"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="57"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="58"/>
         <source>Load from server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="65"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="66"/>
         <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="71"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="72"/>
         <source>cloud Bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="81"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="82"/>
         <source>Opening link in web browser</source>
         <translation type="unfinished"></translation>
     </message>
