@@ -33,7 +33,7 @@ ListModel
             // by checking for commas
             if(currentRow.tags && currentRow.tags.indexOf(',') < 0)
             {
-                tags = currentRow.tags.toString().replace(',', ', ');
+                tags = currentRow.tags.toString().replace(/,/g, ', ');
             }
             else if(currentRow.tags)
             {
@@ -45,7 +45,7 @@ ListModel
             }
             else
             {
-                if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) > 0)
+                if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0)
                 {
                     bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
                 }

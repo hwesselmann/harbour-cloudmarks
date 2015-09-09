@@ -32,7 +32,7 @@ function storeBookmarks(rows)
         // by checking for commas
         if(currentRow.tags)
         {
-            tags = currentRow.tags.toString().replace(',', ', ');
+            tags = currentRow.tags.toString().replace(/,/g, ', ');
         }
 
         storeBookmark(db, currentRow.title, currentRow.description, currentRow.url, tags);
