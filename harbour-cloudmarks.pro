@@ -42,3 +42,6 @@ CONFIG += sailfishapp_i18n
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-cloudmarks-de.ts
 
+RESOURCES += \
+    res.qrc
+

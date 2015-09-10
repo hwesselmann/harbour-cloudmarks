@@ -17,15 +17,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import QtQuick 2.0
+import QtQuick 2.1
 import Sailfish.Silica 1.0
 
 CoverBackground {
-    Label {
-        id: label
-        anchors.centerIn: parent
-        text: qsTr("cloudMarks")
-    }
+    CoverPlaceholder {
+       text: qsTr("cloudMarks")
+       icon.source: "qrc:/qml/img/covericon.png"
+       anchors.margins: Theme.paddingMedium
+   }
 }
-
-
