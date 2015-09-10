@@ -45,7 +45,9 @@ ListModel
             }
             else
             {
-                if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0)
+                var title = currentRow.title ? currentRow.title : "";
+                var description = currentRow.description ? currentRow.description : "";
+                if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0 || title.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0 || description.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0)
                 {
                     bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
                 }

@@ -46,7 +46,7 @@
     <name>SearchPage</name>
     <message>
         <location filename="../qml/pages/SearchPage.qml" line="41"/>
-        <source>Search by tag</source>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

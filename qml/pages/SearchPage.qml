@@ -38,7 +38,7 @@ Page {
         header: SearchField {
             width: parent.width
             text: searchTerm
-            placeholderText: qsTr("Search by tag")
+            placeholderText: qsTr("Search")
             EnterKey.enabled: text.length > 0
             EnterKey.onClicked: {
                 parent.focus = true;

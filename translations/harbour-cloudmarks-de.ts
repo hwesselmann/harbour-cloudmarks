@@ -42,8 +42,8 @@
         <translation>Öffne Link im Browser</translation>
     </message>
     <message>
-        <source>Search by tag</source>
-        <translation>Suche nach Tags</translation>
+        <source>Search</source>
+        <translation>Suche</translation>
     </message>
 </context>
 <context>
