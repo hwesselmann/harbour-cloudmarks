@@ -24,5 +24,9 @@ QtObject {
     property string ocUsername
     property string ocPassword
 
-    readonly property string version: "1.0"
+    property string showDescription
+    property string showUrl
+    property string showTags
+
+    readonly property string version: "1.1"
 }

@@ -48,6 +48,15 @@ ApplicationWindow
 
                     var ocPassword = SettingsDatabase.transactionGet(tx, "ocPassword");
                     settings.ocPassword = (ocPassword === false ? "" : ocPassword);
+
+                    var showDescription = SettingsDatabase.transactionGet(tx, "showDescription");
+                    settings.showDescription = (showDescription === false ? "true" : showDescription);
+
+                    var showTags = SettingsDatabase.transactionGet(tx, "showTags");
+                    settings.showTags = (showTags === false ? "true" : showTags);
+
+                    var showUrl = SettingsDatabase.transactionGet(tx, "showUrl");
+                    settings.showUrl = (showUrl === false ? "false" : showUrl);
                 });
         }
     }

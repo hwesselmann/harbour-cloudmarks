@@ -52,5 +52,29 @@
         <source>Save Settings</source>
         <translation>Speichern</translation>
     </message>
+    <message>
+        <source>description</source>
+        <translation>Beschreibung</translation>
+    </message>
+    <message>
+        <source>show description in bookmark list</source>
+        <translation>Zeige Beschreibung in der Liste an</translation>
+    </message>
+    <message>
+        <source>tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>show tags in bookmark list</source>
+        <translation>Zeige Tags in der Liste an</translation>
+    </message>
+    <message>
+        <source>url</source>
+        <translation>URL</translation>
+    </message>
+    <message>
+        <source>show url in bookmark list</source>
+        <translation>Zeige URL in der Liste an</translation>
+    </message>
 </context>
 </TS>

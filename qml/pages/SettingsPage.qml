@@ -36,10 +36,40 @@ Dialog {
         settings.ocUsername = ocUsernameTF.text;
         settings.ocPassword = ocPasswordTF.text;
 
+        if(showDescriptionCB.checked)
+        {
+            settings.showDescription = "true"
+        }
+        else
+        {
+            settings.showDescription = "false"
+        }
+
+        if(showTagsCB.checked)
+        {
+            settings.showTags = "true"
+        }
+        else
+        {
+            settings.showTags = "false"
+        }
+
+        if(showUrlCB.checked)
+        {
+            settings.showUrl = "true"
+        }
+        else
+        {
+            settings.showUrl = "false"
+        }
+
         SettingsDatabase.transaction(function(tx) {
             SettingsDatabase.transactionSet(tx, "ocUrl", settings.ocUrl);
             SettingsDatabase.transactionSet(tx, "ocUsername", settings.ocUsername);
             SettingsDatabase.transactionSet(tx, "ocPassword", settings.ocPassword);
+            SettingsDatabase.transactionSet(tx, "showDescription", settings.showDescription);
+            SettingsDatabase.transactionSet(tx, "showTags", settings.showTags);
+            SettingsDatabase.transactionSet(tx, "showUrl", settings.showUrl);
         });
     }
 
@@ -100,6 +130,27 @@ Dialog {
                 EnterKey.onClicked: {
                     parent.focus = true;
                 }
+            }
+
+            TextSwitch {
+                id: showDescriptionCB
+                text: qsTr("description")
+                description: qsTr("show description in bookmark list")
+                checked: settings.showDescription === "true"
+            }
+
+            TextSwitch {
+                id: showTagsCB
+                text: qsTr("tags")
+                description: qsTr("show tags in bookmark list")
+                checked: settings.showTags === "true"
+            }
+
+            TextSwitch {
+                id: showUrlCB
+                text: qsTr("url")
+                description: qsTr("show url in bookmark list")
+                checked: settings.showUrl === "true"
             }
         }
     }

@@ -57,7 +57,21 @@ ListItem {
                 right: parent.right
                  margins: Theme.paddingLarge
             }
-            visible: description
+            visible: description && settings.showDescription === "true"
+        }
+
+        Label {
+            id: itemUrl
+            text: url
+            font.pixelSize: Theme.fontSizeTiny
+            font.italic: true
+            truncationMode: TruncationMode.Fade
+            anchors {
+                left: parent.left
+                right: parent.right
+                 margins: Theme.paddingLarge
+            }
+            visible: url && settings.showUrl === "true"
         }
 
         Separator {
@@ -80,7 +94,7 @@ ListItem {
                 right: parent.right
                 margins: Theme.paddingLarge
             }
-            visible: tags
+            visible: tags && settings.showTags === "true"
         }
    }
 
