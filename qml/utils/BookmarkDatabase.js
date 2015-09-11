@@ -1,6 +1,17 @@
 .pragma library
 .import QtQuick.LocalStorage 2.0 as Storage
 
+function sanitizeString(s)
+{
+    // Trim whitespace at the beginning / end
+    s = s.replace(/(^\s+|\s+$)/g,'')
+
+    // Replace multiple whitespaces with one whitespace
+    s = s.replace(/\s+/g, ' ')
+
+    return s
+}
+
 function instance()
 {
     return openDatabase("1.0");
@@ -41,6 +52,10 @@ function storeBookmarks(rows)
 
 function storeBookmark(db, title, description, url, tags)
 {
+    title = sanitizeString(title ? title : "");
+    description = sanitizeString(description ? description : "");
+    tags = sanitizeString(tags ? tags : "");
+
     db.transaction(function(tx) {
         tx.executeSql("INSERT INTO Bookmarks (url, title, description, tags) VALUES (?, ?, ?, ?);", [url, title, description, tags]);
     });

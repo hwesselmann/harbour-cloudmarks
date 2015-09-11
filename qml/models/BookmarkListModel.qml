@@ -29,30 +29,39 @@ ListModel
         {
             var currentRow = rows[li];
             var tags = "";
+            // replace null fields with empty string and sanitize the content for displaying
+            var title = sanitizeString(currentRow.title ? currentRow.title : "");
+            var description = sanitizeString(currentRow.description ? currentRow.description : "");
             // in owncloud, tags names cannot contain a comma, so we can check if we are dealing with a json response
             // by checking for commas
             if(currentRow.tags && currentRow.tags.indexOf(',') < 0)
             {
-                tags = currentRow.tags.toString().replace(/,/g, ', ');
+                tags = sanitizeString(currentRow.tags.toString().replace(/,/g, ', '));
             }
             else if(currentRow.tags)
             {
-                tags = currentRow.tags;
+                tags = sanitizeString(currentRow.tags);
             }
             if(searchTerm.length <= 0)
             {
-                bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
+                bookmarkListModel.append({"url": currentRow.url, "title": title, "description": description, "tags": tags})
             }
             else
             {
-                var title = currentRow.title ? currentRow.title : "";
-                var description = currentRow.description ? currentRow.description : "";
                 if(tags.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0 || title.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0 || description.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0)
                 {
-                    bookmarkListModel.append({"url": currentRow.url, "title": currentRow.title, "description": currentRow.description, "tags": tags})
+                    bookmarkListModel.append({"url": currentRow.url, "title": title, "description": description, "tags": tags})
                 }
             }
 
         }
+    }
+
+    function sanitizeString(s)
+    {
+        s = s.replace(/(^\s+|\s+$)/g,'')
+        s = s.replace(/\s+/g, ' ')
+
+        return s
     }
 }
