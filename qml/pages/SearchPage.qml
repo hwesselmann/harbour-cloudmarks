@@ -39,12 +39,10 @@ Page {
             width: parent.width
             text: searchTerm
             placeholderText: qsTr("Search")
-            EnterKey.enabled: text.length > 0
             EnterKey.onClicked: {
                 parent.focus = true;
                 filterBookmarksBySearchTerm(this.text);
             }
-
         }
 
         model: bookmarkListModel
@@ -59,8 +57,8 @@ Page {
         }
     }
 
-    function filterBookmarksBySearchTerm(searchTerm) {
-        searchTerm = searchTerm;
+    function filterBookmarksBySearchTerm(searchterm) {
+        searchTerm = searchterm;
         BookmarkDatabase.load();
         BookmarkDatabase.queryBookmarks(bookmarkListModel, searchTerm);
     }

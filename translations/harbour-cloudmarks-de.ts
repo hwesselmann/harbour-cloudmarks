@@ -20,12 +20,12 @@
         <translation type="unfinished">Suche</translation>
     </message>
     <message>
-        <source>cloud Bookmarks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Opening link in web browser</source>
         <translation type="unfinished">Öffne Link im Browser</translation>
+    </message>
+    <message>
+        <source>cloud Bookmarks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

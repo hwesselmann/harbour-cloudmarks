@@ -45,12 +45,12 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="41"/>
+        <location filename="../qml/pages/SearchPage.qml" line="42"/>
         <source>Search</source>
         <translation>Søg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="57"/>
+        <location filename="../qml/pages/SearchPage.qml" line="56"/>
         <source>Opening link in web browser</source>
         <translation>Åbner i netlæser</translation>
     </message>

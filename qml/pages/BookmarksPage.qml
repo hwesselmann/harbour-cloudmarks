@@ -93,37 +93,37 @@ Page {
     }
 
     Python {
-            id: python
+        id: python
 
-            Component.onCompleted: {
-                var pythonpath = Qt.resolvedUrl('.').substr('file://'.length);
-                addImportPath(pythonpath);
-                var requestspath = Qt.resolvedUrl('../../third-party/requests').substr('file://'.length);
-                addImportPath(requestspath);
+        Component.onCompleted: {
+            var pythonpath = Qt.resolvedUrl('.').substr('file://'.length);
+            addImportPath(pythonpath);
+            var requestspath = Qt.resolvedUrl('../../third-party/requests').substr('file://'.length);
+            addImportPath(requestspath);
 
-                importModule('cloudmarks', function () {});
+            importModule('cloudmarks', function () {});
 
-            }
-
-            function reloadFromServer() {
-                call('cloudmarks.loadBookmarksFromServer', [mainwindow.settings.ocUrl, mainwindow.settings.ocUsername, mainwindow.settings.ocPassword, mainwindow.settings.ignoreSSLErrors], function(response) {
-                    var responseJSON = JSON.parse(response);
-                    BookmarkDatabase.clear();
-                    BookmarkDatabase.storeBookmarks(responseJSON);
-                    bookmarkListModel.populate(responseJSON, "");
-                    busyIndicator.running = false
-                    busyIndicator.visible = false
-                });
-            }
-
-            onError: {
-                console.log('python error: ' + traceback);
-            }
-
-            onReceived: {
-                console.log('got message from python: ' + data);
-            }
         }
+
+        function reloadFromServer() {
+            call('cloudmarks.loadBookmarksFromServer', [mainwindow.settings.ocUrl, mainwindow.settings.ocUsername, mainwindow.settings.ocPassword, mainwindow.settings.ignoreSSLErrors], function(response) {
+                var responseJSON = JSON.parse(response);
+                BookmarkDatabase.clear();
+                BookmarkDatabase.storeBookmarks(responseJSON);
+                bookmarkListModel.populate(responseJSON, "");
+                busyIndicator.running = false
+                busyIndicator.visible = false
+            });
+        }
+
+        onError: {
+            console.log('python error: ' + traceback);
+        }
+
+        onReceived: {
+            console.log('got message from python: ' + data);
+        }
+    }
 }
 
 
