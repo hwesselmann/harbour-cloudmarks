@@ -5,6 +5,6 @@ The application can be installed from Jolla Store, via Warehouse application, or
 
 Please help to localize the application in more languages - files are on [Transifex](https://www.transifex.com/h-dawgde/cloudmarks/dashboard/).
 
-_If you are using a self-signed certificate with your ownCloud server, you need to add it to your device in order to use this application properly_
+Using the Python [requests module](https://github.com/kennethreitz/requests) for server communication.
 
 Copyright (C) 2015 Hauke Wesselmann

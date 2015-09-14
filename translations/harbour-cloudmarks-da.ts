@@ -4,34 +4,34 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="49"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation>Tomt? Kig indenfor i Indstillinger og hent bogmærker fra din server.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="54"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
         <source>Settings</source>
-        <translation>Indstillinger</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="58"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
         <source>Load from server</source>
-        <translation>Hent fra server</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="66"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>Search</source>
-        <translation>Søg</translation>
+        <translation type="unfinished">Søg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="72"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
         <source>cloud Bookmarks</source>
-        <translation>cloudBogmærker</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="82"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
         <source>Opening link in web browser</source>
-        <translation>Åbner i netlæser</translation>
+        <translation type="unfinished">Åbner i netlæser</translation>
     </message>
 </context>
 <context>

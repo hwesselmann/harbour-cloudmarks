@@ -19,6 +19,7 @@
 
 import QtQuick 2.1
 import Sailfish.Silica 1.0
+import io.thp.pyotherside 1.4
 import "../models"
 import "../components"
 import "../utils/BookmarkDatabase.js" as BookmarkDatabase
@@ -59,7 +60,7 @@ Page {
                 onClicked: {
                     busyIndicator.running = true
                     busyIndicator.visible = true
-                    loadBookmarksFromServer();
+                    python.reloadFromServer();
                 }
             }
             MenuItem {
@@ -91,28 +92,39 @@ Page {
         size: BusyIndicatorSize.Large
     }
 
-    function loadBookmarksFromServer() {
+    Python {
+            id: python
 
-        request(mainwindow.settings.ocUrl + '/index.php/apps/bookmarks/public/rest/v1/bookmark?user=' + mainwindow.settings.ocUsername + '&password=' + mainwindow.settings.ocPassword + '&select[0]=tags&select[1]=description', function (o) {
-            var response = JSON.parse(o.responseText);
-            BookmarkDatabase.clear();
-            BookmarkDatabase.storeBookmarks(response);
-            bookmarkListModel.populate(response, "");
-            busyIndicator.running = false
-            busyIndicator.visible = false
-        });
-    }
+            Component.onCompleted: {
+                var pythonpath = Qt.resolvedUrl('.').substr('file://'.length);
+                addImportPath(pythonpath);
+                var requestspath = Qt.resolvedUrl('../../third-party').substr('file://'.length);
+                addImportPath(requestspath);
 
-    function request(url, callback) {
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = (function(myxhr) {
-            return function() {
-                callback(myxhr);
+                importModule('cloudmarks', function () {});
+
             }
-        })(xhr);
-        xhr.open('GET', url, true);
-        xhr.send('');
-    }
+
+            function reloadFromServer() {
+                call('cloudmarks.loadBookmarksFromServer', [mainwindow.settings.ocUrl, mainwindow.settings.ocUsername, mainwindow.settings.ocPassword, mainwindow.settings.ignoreSSLErrors], function(response) {
+                    console.log(response);
+                    //responseJSON = JSON.parse(response);
+                    //BookmarkDatabase.clear();
+                    //BookmarkDatabase.storeBookmarks(responseJSON);
+                    //bookmarkListModel.populate(responseJSON, "");
+                    busyIndicator.running = false
+                    busyIndicator.visible = false
+                });
+            }
+
+            onError: {
+                console.log('python error: ' + traceback);
+            }
+
+            onReceived: {
+                console.log('got message from python: ' + data);
+            }
+        }
 }
 
 

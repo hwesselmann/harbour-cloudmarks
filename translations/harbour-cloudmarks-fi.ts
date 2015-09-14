@@ -4,34 +4,34 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="49"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation>Tyhjää? Käy Asetukset -sivulla ja lataa kirjanmerkkisi palvelimelta.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="54"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
         <source>Settings</source>
-        <translation>Asetukset</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="58"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
         <source>Load from server</source>
-        <translation>Lataa palvelimelta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="66"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>Search</source>
-        <translation>Haku</translation>
+        <translation type="unfinished">Haku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="72"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
         <source>cloud Bookmarks</source>
-        <translation>cloud -kirjanmerkit</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="82"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
         <source>Opening link in web browser</source>
-        <translation>Linkin avaaminen selaimessa</translation>
+        <translation type="unfinished">Linkin avaaminen selaimessa</translation>
     </message>
 </context>
 <context>

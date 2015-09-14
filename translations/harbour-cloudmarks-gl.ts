@@ -4,34 +4,34 @@
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="49"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation>Nada por aquí? Visite a páxina de preferencias e logo cargue os marcadores do seu servidor.</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="54"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
         <source>Settings</source>
-        <translation>Preferencias</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="58"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
         <source>Load from server</source>
-        <translation>Cargar do servidor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="66"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>Search</source>
-        <translation>Búsqueda</translation>
+        <translation type="unfinished">Búsqueda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="72"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
         <source>cloud Bookmarks</source>
-        <translation>Marcadores na nube</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="82"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
         <source>Opening link in web browser</source>
-        <translation>Abrindo a ligazón no navegador</translation>
+        <translation type="unfinished">Abrindo a ligazón no navegador</translation>
     </message>
 </context>
 <context>
