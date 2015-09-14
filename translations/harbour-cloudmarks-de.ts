@@ -76,5 +76,13 @@
         <source>show url in bookmark list</source>
         <translation>Zeige URL in der Liste an</translation>
     </message>
+    <message>
+        <source>ignore SSL errors</source>
+        <translation>SSL-Fehler ignorieren</translation>
+    </message>
+    <message>
+        <source>activate if you use a certificate not signed by a CA present on your device</source>
+        <translation>aktiviere die Option wenn Du ein Zertifikat verwendest, dass von Deinem Gerät nicht validiert werden kann</translation>
+    </message>
 </context>
 </TS>

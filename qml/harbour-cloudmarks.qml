@@ -49,6 +49,9 @@ ApplicationWindow
                     var ocPassword = SettingsDatabase.transactionGet(tx, "ocPassword");
                     settings.ocPassword = (ocPassword === false ? "" : ocPassword);
 
+                    var ignoreSSLErrors = SettingsDatabase.transactionGet(tx, "ignoreSSLErrors");
+                    settings.ignoreSSLErrors = (ignoreSSLErrors === false ? "false" : ignoreSSLErrors);
+
                     var showDescription = SettingsDatabase.transactionGet(tx, "showDescription");
                     settings.showDescription = (showDescription === false ? "true" : showDescription);
 

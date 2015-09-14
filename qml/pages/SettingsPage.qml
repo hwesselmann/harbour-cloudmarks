@@ -36,6 +36,15 @@ Dialog {
         settings.ocUsername = ocUsernameTF.text;
         settings.ocPassword = ocPasswordTF.text;
 
+        if(ignoreSSLErrorsCB.checked)
+        {
+            settings.ignoreSSLErrors = "true"
+        }
+        else
+        {
+            settings.ignoreSSLErrors = "false"
+        }
+
         if(showDescriptionCB.checked)
         {
             settings.showDescription = "true"
@@ -67,6 +76,7 @@ Dialog {
             SettingsDatabase.transactionSet(tx, "ocUrl", settings.ocUrl);
             SettingsDatabase.transactionSet(tx, "ocUsername", settings.ocUsername);
             SettingsDatabase.transactionSet(tx, "ocPassword", settings.ocPassword);
+            SettingsDatabase.transactionSet(tx, "ignoreSSLErrors", settings.ignoreSSLErrors);
             SettingsDatabase.transactionSet(tx, "showDescription", settings.showDescription);
             SettingsDatabase.transactionSet(tx, "showTags", settings.showTags);
             SettingsDatabase.transactionSet(tx, "showUrl", settings.showUrl);
@@ -130,6 +140,22 @@ Dialog {
                 EnterKey.onClicked: {
                     parent.focus = true;
                 }
+            }
+
+            TextSwitch {
+                id: ignoreSSLErrorsCB
+                text: qsTr("ignore SSL errors")
+                description: qsTr("activate if you use a certificate not signed by a CA present on your device")
+                checked: settings.ignoreSSLErrors === "true"
+            }
+
+            Separator {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: Theme.paddingLarge
+                }
+                color: Theme.primaryColor
             }
 
             TextSwitch {
