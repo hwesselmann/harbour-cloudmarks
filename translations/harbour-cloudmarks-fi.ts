@@ -1,37 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.1">
 <context>
     <name>BookmarksPage</name>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjää? Käy Asetukset -sivulla ja lataa kirjanmerkkisi palvelimelta.</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
         <source>Load from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataa palvelimelta</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>Search</source>
-        <translation type="unfinished">Haku</translation>
+        <translation>Haku</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
         <source>cloud Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>cloud -kirjanmerkit</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
         <source>Opening link in web browser</source>
-        <translation type="unfinished">Linkin avaaminen selaimessa</translation>
+        <translation>Linkin avaaminen selaimessa</translation>
     </message>
 </context>
 <context>
@@ -45,12 +43,12 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="41"/>
+        <location filename="../qml/pages/SearchPage.qml" line="42"/>
         <source>Search</source>
         <translation>Haku</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="55"/>
+        <location filename="../qml/pages/SearchPage.qml" line="56"/>
         <source>Opening link in web browser</source>
         <translation>Linkin avaaminen selaimessa</translation>
     </message>
@@ -65,12 +63,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="147"/>
         <source>ignore SSL errors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>activate if you use a certificate not signed by a CA present on your device</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="163"/>

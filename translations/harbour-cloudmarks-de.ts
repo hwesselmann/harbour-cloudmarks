@@ -5,27 +5,27 @@
     <name>BookmarksPage</name>
     <message>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Lesezeichen zu sehen? Gehe zu den Einstellungen und lade dann die Lesezeichen von Deinem Server.</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen</translation>
     </message>
     <message>
         <source>Load from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu laden</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished">Suche</translation>
+        <translation>Suche</translation>
     </message>
     <message>
         <source>Opening link in web browser</source>
-        <translation type="unfinished">Öffne Link im Browser</translation>
+        <translation>Öffne Link im Browser</translation>
     </message>
     <message>
         <source>cloud Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>cloud Bookmarks</translation>
     </message>
 </context>
 <context>

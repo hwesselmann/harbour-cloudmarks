@@ -1,37 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="gl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="gl" version="2.1">
 <context>
     <name>BookmarksPage</name>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nada por aquí? Visite a páxina de preferencias e logo cargue os marcadores do seu servidor.</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
         <source>Load from server</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargar do servidor</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
         <source>Search</source>
-        <translation type="unfinished">Búsqueda</translation>
+        <translation>Búsqueda</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
         <source>cloud Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcadores na nube</translation>
     </message>
     <message>
         <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
         <source>Opening link in web browser</source>
-        <translation type="unfinished">Abrindo a ligazón no navegador</translation>
+        <translation>Abrindo a ligazón no navegador</translation>
     </message>
 </context>
 <context>
@@ -45,12 +43,12 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="41"/>
+        <location filename="../qml/pages/SearchPage.qml" line="42"/>
         <source>Search</source>
         <translation>Búsqueda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="55"/>
+        <location filename="../qml/pages/SearchPage.qml" line="56"/>
         <source>Opening link in web browser</source>
         <translation>Abrindo a ligazón no navegador</translation>
     </message>
@@ -65,12 +63,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="147"/>
         <source>ignore SSL errors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>activate if you use a certificate not signed by a CA present on your device</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="163"/>
