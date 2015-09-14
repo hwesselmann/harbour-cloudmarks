@@ -27,10 +27,10 @@ def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
     userPath = '?user=' + user
     passwordPath = '&password=' + password
     selectionPath = '&select[0]=tags&select[1]=description'
-    ignoreErrors = False
+    ignoreErrors = True
 
     if ignoreSSLErrors == "true":
-        ignoreErrors = True
+        ignoreErrors = False
 
     response = requests.get(ocPath + userPath + passwordPath + selectionPath, verify=ignoreErrors)
     return response.text
