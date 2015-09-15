@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="es">
 <context>
     <name>BookmarksPage</name>
     <message>
@@ -43,12 +45,12 @@
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="42"/>
+        <location filename="../qml/pages/SearchPage.qml" line="41"/>
         <source>Search</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="56"/>
+        <location filename="../qml/pages/SearchPage.qml" line="55"/>
         <source>Opening link in web browser</source>
         <translation>Abriendo enlace en navegador</translation>
     </message>
@@ -63,12 +65,12 @@
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="147"/>
         <source>ignore SSL errors</source>
-        <translation type="unfinished"/>
+        <translation>ignorar errores SSL</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="148"/>
         <source>activate if you use a certificate not signed by a CA present on your device</source>
-        <translation type="unfinished"/>
+        <translation>activelo si usa un certificado no firmado por una CA</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingsPage.qml" line="163"/>
