@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr">
 <context>
     <name>BookmarksPage</name>
     <message>
@@ -43,6 +45,7 @@
 <context>
     <name>SearchPage</name>
     <message>
+        <location filename="../qml/pages/SearchPage.qml" line="41"/>
         <location filename="../qml/pages/SearchPage.qml" line="42"/>
         <source>Search</source>
         <translation>Rechercher</translation>
