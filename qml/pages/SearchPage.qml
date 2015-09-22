@@ -39,6 +39,7 @@ Page {
             width: parent.width
             text: searchTerm
             placeholderText: qsTr("Search")
+            EnterKey.text: qsTr("Search")
             EnterKey.onClicked: {
                 parent.focus = true;
                 filterBookmarksBySearchTerm(this.text);
