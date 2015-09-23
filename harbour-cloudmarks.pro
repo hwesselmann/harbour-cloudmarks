@@ -46,7 +46,8 @@ TRANSLATIONS += translations/harbour-cloudmarks-de.ts \
     translations/harbour-cloudmarks-es.ts \
     translations/harbour-cloudmarks-da.ts \
     translations/harbour-cloudmarks-gl.ts \
-    translations/harbour-cloudmarks-fr.ts
+    translations/harbour-cloudmarks-fr.ts \
+    translations/harbour-cloudmarks-nl.ts
 
 RESOURCES += \
     res.qrc
