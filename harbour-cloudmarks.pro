@@ -31,7 +31,21 @@ OTHER_FILES += qml/harbour-cloudmarks.qml \
     qml/utils/BookmarkDatabase.js \
     qml/utils/SettingsDatabase.js \
     qml/pages/SearchPage.qml \
-    qml/pages/cloudmarks.py
+    qml/pages/cloudmarks.py \
+    third-party/requests/*.py \
+    third-party/requests/requests/*.py \
+    third-party/requests/requests/packages/*.py \
+    third-party/requests/requests/packages/urllib3/*.py \
+    third-party/requests/requests/packages/urllib3/contrib/*.py \
+    third-party/requests/requests/packages/urllib3/util/*.py \
+    third-party/requests/requests/packages/urllib3/packages/*.py \
+    third-party/requests/requests/packages/urllib3/packages/ssl_match_hostname/*.py \
+    third-party/requests/requests/packages/chardet/*.py
+
+python_files.files = third-party
+python_files.path = /usr/share/$$TARGET
+
+INSTALLS += python_files
 
 # to disable building translations every time, comment out the
 # following CONFIG line
