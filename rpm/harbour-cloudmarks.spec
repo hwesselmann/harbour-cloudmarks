@@ -14,7 +14,7 @@ Name:       harbour-cloudmarks
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    A native client for the owncloud bookmarks application
-Version:    0.6.1
+Version:    0.6.2
 Release:    1
 Group:      Applications/Network
 License:    LGPL v3

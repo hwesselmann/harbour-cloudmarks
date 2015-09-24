@@ -51,7 +51,7 @@
         <translation>Búsqueda</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="56"/>
+        <location filename="../qml/pages/SearchPage.qml" line="60"/>
         <source>Opening link in web browser</source>
         <translation>Abrindo a ligazón no navegador</translation>
     </message>
