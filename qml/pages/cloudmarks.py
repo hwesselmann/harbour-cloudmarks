@@ -18,21 +18,18 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import pyotherside
 import requests
 
+
 def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
-    # initialize some stuff (not elegant)
     ocPath = url + '/index.php/apps/bookmarks/public/rest/v1/bookmark'
-    userPath = '?user=' + user
-    passwordPath = '&password=' + password
-    selectionPath = '&select[0]=tags&select[1]=description'
+    ocPath += '?user=' + user
+    ocPath += '&password=' + password
+    ocPath += '&select[0]=tags&select[1]=description'
     ignoreErrors = True
 
     if ignoreSSLErrors == "true":
         ignoreErrors = False
 
-    response = requests.get(ocPath + userPath + passwordPath + selectionPath, verify=ignoreErrors)
+    response = requests.get(ocPath, verify=ignoreErrors)
     return response.text
-
-
