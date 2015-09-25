@@ -19,6 +19,11 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import requests
+import os
+import datetime
+import pyotherside
+import json
+import traceback
 
 
 def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
@@ -33,3 +38,26 @@ def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
 
     response = requests.get(ocPath, verify=ignoreErrors)
     return response.text
+
+
+def exportBookmarkstoSailfishBrowser(bookmarks):
+    bookmarkList = []
+    bookmarkObj = json.loads(bookmarks)
+    try:
+        for b in bookmarkObj:
+            bookmark = {
+                'favicon': 'icon-launcher-bookmark',
+                'hasTouchIcon': False,
+                'title': b['title'],
+                'url': b['url']
+            }
+            bookmarkList.append(bookmark)
+
+        path = '/home/nemo/.local/share/org.sailfishos/sailfish-browser/'
+        timestamp = str(datetime.datetime.now().timestamp())
+        backup = '/home/nemo/bookmarks.json.bak' + timestamp
+        os.renames(path + 'bookmarks.json', backup)
+        with open(path + 'bookmarks.json', 'w') as f:
+            json.dump(bookmarkList, f)
+    except:
+        pyotherside.send(traceback.print_exc())

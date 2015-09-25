@@ -56,6 +56,14 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"), { "settings": mainwindow.settings})
             }
             MenuItem {
+                text: qsTr("Export to Browser")
+                onClicked: {
+                    busyIndicator.running = true
+                    busyIndicator.visible = true
+                    python.exportToSailfishBrowser();
+                }
+            }
+            MenuItem {
                 text: qsTr("Load from server")
                 onClicked: {
                     busyIndicator.running = true
@@ -113,6 +121,21 @@ Page {
                 bookmarkListModel.populate(responseJSON, "");
                 busyIndicator.running = false
                 busyIndicator.visible = false
+            });
+        }
+
+        function exportToSailfishBrowser() {
+            var bookmarkObj = [];
+            for(var li = 0; li < bookmarkList.count; li++) {
+                var item = {};
+                item["title"] = bookmarkListModel.get(li).title;
+                item["url"] = bookmarkListModel.get(li).url;
+                bookmarkObj.push(item);
+            }
+            call('cloudmarks.exportBookmarkstoSailfishBrowser', [JSON.stringify(bookmarkObj)], function(response) {
+                busyIndicator.running = false
+                busyIndicator.visible = false
+                infoBanner.showText(qsTr("Export to Sailfish Browser successful"));
             });
         }
 

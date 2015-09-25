@@ -1,8 +1,6 @@
 SOURCES += qml/harbour-cloudmarks.qml \
     qml/cover/CoverPage.qml \
-    rpm/harbour-cloudmarks.changes.in \
-    rpm/harbour-cloudmarks.spec \
-    rpm/harbour-cloudmarks.yaml \
+    harbour-cloudmarks.spec \
     translations/*.ts \
     harbour-cloudmarks.desktop \
     qml/models/Settings.qml \
@@ -15,7 +13,8 @@ SOURCES += qml/harbour-cloudmarks.qml \
     qml/pages/SearchPage.qml \
     qml/pages/cloudmarks.py
 
-TRANSLATIONS += translations/harbour-cloudmarks-de.ts \
+TRANSLATIONS += translations/harbour-cloudmarks.ts \
+    translations/harbour-cloudmarks-de.ts \
     translations/harbour-cloudmarks-fi.ts \
     translations/harbour-cloudmarks-es.ts \
     translations/harbour-cloudmarks-da.ts \

@@ -1,105 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="1.1" language="da">
+<!DOCTYPE TS>
+<TS version="2.1" language="da">
 <context>
     <name>BookmarksPage</name>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="50"/>
+        <location filename="../qml/pages/BookmarksPage.qml" line="+50"/>
+        <location line="+0"/>
         <source>Nothing here? Visit the settings page and then load bookmarks from your server.</source>
-        <translation type="obsolete">Tomt? Kig indenfor i Indstillinger og hent bogmærker fra din server.</translation>
+        <translation type="unfinished">Tomt? Kig indenfor i Indstillinger og hent bogmærker fra din server.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="55"/>
+        <location line="+5"/>
+        <location line="+0"/>
         <source>Settings</source>
-        <translation type="obsolete">Indstillinger</translation>
+        <translation type="unfinished">Indstillinger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="59"/>
+        <location line="+4"/>
+        <location line="+0"/>
+        <source>Export to Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+0"/>
         <source>Load from server</source>
-        <translation type="obsolete">Hent fra server</translation>
+        <translation type="unfinished">Hent fra server</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="67"/>
+        <location line="+8"/>
+        <location line="+0"/>
         <source>Search</source>
-        <translation type="obsolete">Søg</translation>
+        <translation type="unfinished">Søg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="73"/>
+        <location line="+6"/>
+        <location line="+0"/>
         <source>cloud Bookmarks</source>
-        <translation type="obsolete">cloudbogmærker</translation>
+        <translation type="unfinished">cloudbogmærker</translation>
     </message>
     <message>
-        <location filename="../qml/pages/BookmarksPage.qml" line="83"/>
+        <location line="+10"/>
+        <location line="+0"/>
         <source>Opening link in web browser</source>
-        <translation type="obsolete">Åbner i netlæser</translation>
+        <translation type="unfinished">Åbner i netlæser</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <location line="+0"/>
+        <source>Export to Sailfish Browser successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+0"/>
+        <source>Successful export to Sailfish Browser</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
-        <location filename="../qml/cover/CoverPage.qml" line="25"/>
+        <location filename="../qml/cover/CoverPage.qml" line="+25"/>
+        <location line="+0"/>
         <source>cloudMarks</source>
-        <translation type="obsolete">cloudMarks</translation>
+        <translation type="unfinished">cloudMarks</translation>
     </message>
 </context>
 <context>
     <name>SearchPage</name>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="42"/>
+        <location filename="../qml/pages/SearchPage.qml" line="+41"/>
+        <location line="+1"/>
+        <location line="-1"/>
         <source>Search</source>
-        <translation type="obsolete">Søg</translation>
+        <translation type="unfinished">Søg</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SearchPage.qml" line="60"/>
+        <location line="+15"/>
+        <location line="+0"/>
         <source>Opening link in web browser</source>
-        <translation type="obsolete">Åbner i netlæser</translation>
+        <translation type="unfinished">Åbner i netlæser</translation>
     </message>
 </context>
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="103"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="+103"/>
+        <location line="+0"/>
         <source>Save Settings</source>
-        <translation type="obsolete">Gem Indstillinger</translation>
+        <translation type="unfinished">Gem Indstillinger</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="147"/>
+        <location line="+44"/>
+        <location line="+0"/>
         <source>ignore SSL errors</source>
-        <translation type="obsolete">ignorer SSL-fejl</translation>
+        <translation type="unfinished">ignorer SSL-fejl</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="148"/>
+        <location line="+1"/>
+        <location line="+0"/>
         <source>activate if you use a certificate not signed by a CA present on your device</source>
-        <translation type="obsolete">aktivér denne hvis du bruger et certifikat der ikke er signeret af en CA registreret på din enhed</translation>
+        <translation type="unfinished">aktivér denne hvis du bruger et certifikat der ikke er signeret af en CA registreret på din enhed</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="163"/>
+        <location line="+15"/>
+        <location line="+0"/>
         <source>description</source>
-        <translation type="obsolete">beskrivelse</translation>
+        <translation type="unfinished">beskrivelse</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="164"/>
+        <location line="+1"/>
+        <location line="+0"/>
         <source>show description in bookmark list</source>
-        <translation type="obsolete">vis beskrivelse i bogmærkeliste</translation>
+        <translation type="unfinished">vis beskrivelse i bogmærkeliste</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="170"/>
+        <location line="+6"/>
+        <location line="+0"/>
         <source>tags</source>
-        <translation type="obsolete">mærker</translation>
+        <translation type="unfinished">mærker</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="171"/>
+        <location line="+1"/>
+        <location line="+0"/>
         <source>show tags in bookmark list</source>
-        <translation type="obsolete">vis mærker i bogmærkeliste</translation>
+        <translation type="unfinished">vis mærker i bogmærkeliste</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="177"/>
+        <location line="+6"/>
+        <location line="+0"/>
         <source>url</source>
-        <translation type="obsolete">URL</translation>
+        <translation type="unfinished">URL</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="178"/>
+        <location line="+1"/>
+        <location line="+0"/>
         <source>show url in bookmark list</source>
-        <translation type="obsolete">vis URL i bogmærkeliste</translation>
+        <translation type="unfinished">vis URL i bogmærkeliste</translation>
     </message>
 </context>
 </TS>
