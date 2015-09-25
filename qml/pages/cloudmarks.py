@@ -54,12 +54,12 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
             bookmarkList.append(bookmark)
 
         home = os.environ['HOME']
-        path = '.local/share/'
+        path = '/.local/share/'
         browser = 'org.sailfishos/sailfish-browser/'
         timestamp = str(datetime.datetime.now().timestamp())
         backup = sPath + '/bookmarks.json.bak' + timestamp
         os.renames(home + path + browser + 'bookmarks.json', backup)
-        with open(path + 'bookmarks.json', 'w') as f:
+        with open(home + path + browser + 'bookmarks.json', 'w') as f:
             json.dump(bookmarkList, f)
     except:
         pyotherside.send(traceback.print_exc())
