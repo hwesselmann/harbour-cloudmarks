@@ -1,7 +1,7 @@
 Name:       harbour-cloudmarks
 
 Summary:    A native client for the owncloud bookmarks application
-Version:    0.6.2
+Version:    0.7
 Release:    1
 Group:      Applications/Network
 License:    LGPL v3
