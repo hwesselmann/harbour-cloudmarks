@@ -2,7 +2,7 @@
 Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-cloudmarks
-Exec=harbour-cloudmarks
+Exec=sailfish-qml harbour-cloudmarks
 Name=cloudMarks
 # translation example:
 # your app name in German locale (de)

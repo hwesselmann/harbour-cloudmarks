@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>qml/img/covericon.png</file>
-    </qresource>
-</RCC>

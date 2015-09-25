@@ -23,7 +23,7 @@ import Sailfish.Silica 1.0
 CoverBackground {
     CoverPlaceholder {
        text: qsTr("cloudMarks")
-       icon.source: "qrc:/qml/img/covericon.png"
+       icon.source: "../img/covericon.png"
        anchors.margins: Theme.paddingMedium
    }
 }
