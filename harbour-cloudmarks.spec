@@ -23,8 +23,10 @@ rm -rf %{buildroot}
 # Application files
 TARGET=%{buildroot}/%{_datadir}/%{name}
 mkdir -p $TARGET
+mkdir -p $TARGET/translations
 cp -rpv qml $TARGET/qml
 cp -rpv third-party $TARGET/third-party
+cp -pv translations/*.qm $TARGET/translations/
 
 # Desktop Entry
 TARGET=%{buildroot}/%{_datadir}/applications
