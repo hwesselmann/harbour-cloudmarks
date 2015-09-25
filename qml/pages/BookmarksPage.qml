@@ -132,7 +132,7 @@ Page {
                 item["url"] = bookmarkListModel.get(li).url;
                 bookmarkObj.push(item);
             }
-            call('cloudmarks.exportBookmarkstoSailfishBrowser', [JSON.stringify(bookmarkObj)], function(response) {
+            call('cloudmarks.exportBookmarkstoSailfishBrowser', [JSON.stringify(bookmarkObj), StandardPaths.data], function(response) {
                 busyIndicator.running = false
                 busyIndicator.visible = false
                 infoBanner.showText(qsTr("Export to Sailfish Browser successful"));

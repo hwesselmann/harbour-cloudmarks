@@ -40,7 +40,7 @@ def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
     return response.text
 
 
-def exportBookmarkstoSailfishBrowser(bookmarks):
+def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
     bookmarkList = []
     bookmarkObj = json.loads(bookmarks)
     try:
@@ -53,10 +53,12 @@ def exportBookmarkstoSailfishBrowser(bookmarks):
             }
             bookmarkList.append(bookmark)
 
-        path = '/home/nemo/.local/share/org.sailfishos/sailfish-browser/'
+        home = os.environ['HOME']
+        path = '.local/share/'
+        browser = 'org.sailfishos/sailfish-browser/'
         timestamp = str(datetime.datetime.now().timestamp())
-        backup = '/home/nemo/bookmarks.json.bak' + timestamp
-        os.renames(path + 'bookmarks.json', backup)
+        backup = sPath + '/bookmarks.json.bak' + timestamp
+        os.renames(home + path + browser + 'bookmarks.json', backup)
         with open(path + 'bookmarks.json', 'w') as f:
             json.dump(bookmarkList, f)
     except:
