@@ -27,7 +27,7 @@ ListItem {
     contentHeight: delegateColumn.height
 
     Column
-   {
+    {
        id: delegateColumn
        width: parent.width
        spacing: 5
@@ -55,7 +55,7 @@ ListItem {
             anchors {
                 left: parent.left
                 right: parent.right
-                 margins: Theme.paddingLarge
+                margins: Theme.paddingLarge
             }
             visible: description && settings.showDescription === "true"
         }
@@ -69,7 +69,7 @@ ListItem {
             anchors {
                 left: parent.left
                 right: parent.right
-                 margins: Theme.paddingLarge
+                margins: Theme.paddingLarge
             }
             visible: url && settings.showUrl === "true"
         }
@@ -83,18 +83,29 @@ ListItem {
             color: Theme.primaryColor
         }
 
-        Label {
-            id: itemTags
-            text: tags
-            font.pixelSize: Theme.fontSizeSmall
-            wrapMode: Text.WordWrap
-            maximumLineCount: 2
+        Row {
             anchors {
                 left: parent.left
                 right: parent.right
                 margins: Theme.paddingLarge
             }
-            visible: tags && settings.showTags === "true"
+            spacing: 5
+
+            Image {
+                source: "../img/icon-s-tag.png"
+                y: 11
+                x: 1
+                visible: tags && settings.showTags === "true"
+            }
+
+            Label {
+                id: itemTags
+                text: tags
+                font.pixelSize: Theme.fontSizeSmall
+                wrapMode: Text.WordWrap
+                maximumLineCount: 2
+                visible: tags && settings.showTags === "true"
+            }
         }
    }
 
