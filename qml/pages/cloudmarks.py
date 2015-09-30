@@ -41,25 +41,34 @@ def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
 
 
 def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
-    bookmarkList = []
-    bookmarkObj = json.loads(bookmarks)
+    bookmark_list = []
+
+    home = os.environ['HOME']
+    path = '/.local/share/'
+    browser = 'org.sailfishos/sailfish-browser/'
+    timestamp = str(datetime.datetime.now().timestamp())
+    backup = sPath + '/bookmarks.json.bak' + timestamp
+
     try:
-        for b in bookmarkObj:
+        bookmark_obj = json.loads(bookmarks)
+        exist_bookmarks = json.load(home + path + browser + 'bookmarks.json')
+        exist_urls = []
+        for ebm in exist_bookmarks:
+            bookmark_list.append(ebm)
+            exist_urls.append(ebm['url'])
+
+        for bm in bookmark_obj:
             bookmark = {
                 'favicon': 'icon-launcher-bookmark',
                 'hasTouchIcon': False,
-                'title': b['title'],
-                'url': b['url']
+                'title': bm['title'],
+                'url': bm['url']
             }
-            bookmarkList.append(bookmark)
+            if bookmark['url'] not in exist_urls:
+                bookmark_list.append(bookmark)
 
-        home = os.environ['HOME']
-        path = '/.local/share/'
-        browser = 'org.sailfishos/sailfish-browser/'
-        timestamp = str(datetime.datetime.now().timestamp())
-        backup = sPath + '/bookmarks.json.bak' + timestamp
         os.renames(home + path + browser + 'bookmarks.json', backup)
         with open(home + path + browser + 'bookmarks.json', 'w') as f:
-            json.dump(bookmarkList, f)
+            json.dump(bookmark_list, f)
     except:
         pyotherside.send(traceback.print_exc())
