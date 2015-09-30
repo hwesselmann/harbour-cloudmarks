@@ -20,4 +20,5 @@ TRANSLATIONS += translations/harbour-cloudmarks.ts \
     translations/harbour-cloudmarks-da.ts \
     translations/harbour-cloudmarks-gl.ts \
     translations/harbour-cloudmarks-fr.ts \
-    translations/harbour-cloudmarks-nl.ts
+    translations/harbour-cloudmarks-nl.ts \
+    translations/harbour-cloudmarks-it.ts
