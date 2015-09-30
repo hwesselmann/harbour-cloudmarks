@@ -51,7 +51,8 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
 
     try:
         bookmark_obj = json.loads(bookmarks)
-        exist_bookmarks = json.load(home + path + browser + 'bookmarks.json')
+        with open(home + path + browser + 'bookmarks.json', 'r') as f:
+            exist_bookmarks = json.load(f)
         exist_urls = []
         for ebm in exist_bookmarks:
             bookmark_list.append(ebm)
