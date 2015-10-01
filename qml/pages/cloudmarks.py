@@ -62,13 +62,13 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
             exist_urls.append(ebm['url'])
 
         for bm in bookmark_obj:
-            bookmark = {
-                'favicon': 'icon-launcher-bookmark',
-                'hasTouchIcon': False,
-                'title': bm['title'],
-                'url': bm['url']
-            }
-            if bookmark['url'] not in exist_urls:
+            if bm['url'] not in exist_urls:
+                bookmark = {
+                    'favicon': 'icon-launcher-bookmark',
+                    'hasTouchIcon': False,
+                    'title': bm['title'],
+                    'url': bm['url']
+                }
                 bookmark_list.append(bookmark)
 
         os.renames(home + path + browser + 'bookmarks.json', backup)
