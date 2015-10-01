@@ -24,6 +24,7 @@ import datetime
 import pyotherside
 import json
 import traceback
+from pyfav import download_favicon
 
 
 def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
@@ -48,8 +49,10 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
     browser = 'org.sailfishos/sailfish-browser/'
     timestamp = str(datetime.datetime.now().timestamp())
     backup = sPath + '/bookmarks.json.bak' + timestamp
+    favicon_path = sPath + '/favicons'
 
     try:
+        _mkdir(favicon_path)
         bookmark_obj = json.loads(bookmarks)
         with open(home + path + browser + 'bookmarks.json', 'r') as f:
             exist_bookmarks = json.load(f)
@@ -73,3 +76,30 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
             json.dump(bookmark_list, f)
     except:
         pyotherside.send(traceback.print_exc())
+
+
+def retrieve_favicon(url, path):
+    return ""
+
+
+def get_encoded_favicon(favicon):
+    return ""
+
+
+def _mkdir(newdir):
+    """works the way a good mkdir should :)
+        - already exists, silently complete
+        - regular file in the way, raise an exception
+        - parent directory(ies) does not exist, make them as well
+    """
+    if os.path.isdir(newdir):
+        pass
+    elif os.path.isfile(newdir):
+        raise OSError("a file with the same name as the desired "
+                      "dir, '%s', already exists." % newdir)
+    else:
+        head, tail = os.path.split(newdir)
+        if head and not os.path.isdir(head):
+            _mkdir(head)
+        if tail:
+            os.mkdir(newdir)
