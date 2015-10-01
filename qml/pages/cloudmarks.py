@@ -25,6 +25,7 @@ import pyotherside
 import json
 import traceback
 from pyfav import download_favicon
+from urllib.parse import urlparse
 
 
 def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
@@ -63,6 +64,8 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
 
         for bm in bookmark_obj:
             if bm['url'] not in exist_urls:
+                curr_favicon_path = retrieve_favicon(bm['url'], favicon_path)
+                print(curr_favicon_path)
                 bookmark = {
                     'favicon': 'icon-launcher-bookmark',
                     'hasTouchIcon': False,
@@ -79,19 +82,16 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
 
 
 def retrieve_favicon(url, path):
-    return ""
+    o = urlparse(url)
+    savloc = download_favicon(url, file_prefix=o.netloc + '-', target_dir=path)
+    return savloc
 
 
-def get_encoded_favicon(favicon):
+def get_encoded_favicon(favicon_location):
     return ""
 
 
 def _mkdir(newdir):
-    """works the way a good mkdir should :)
-        - already exists, silently complete
-        - regular file in the way, raise an exception
-        - parent directory(ies) does not exist, make them as well
-    """
     if os.path.isdir(newdir):
         pass
     elif os.path.isfile(newdir):

@@ -108,6 +108,10 @@ Page {
             addImportPath(pythonpath);
             var requestspath = Qt.resolvedUrl('../../third-party/requests').substr('file://'.length);
             addImportPath(requestspath);
+            var pyfavpath = Qt.resolvedUrl('../../third-party/pyfav').substr('file://'.length);
+            addImportPath(pyfavpath);
+            var bs4path = Qt.resolvedUrl('../../third-party/beautifulsoup4').substr('file://'.length);
+            addImportPath(bs4path);
 
             importModule('cloudmarks', function () {});
 
