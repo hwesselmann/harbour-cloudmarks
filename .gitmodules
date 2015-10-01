@@ -4,3 +4,6 @@
 [submodule "third-party/beautifulsoup4"]
 	path = third-party/beautifulsoup4
 	url = https://github.com/hwesselmann/beautifulsoup4.git
+[submodule "third-party/pyfav"]
+	path = third-party/pyfav
+	url = https://github.com/lhl/pyfav.git
