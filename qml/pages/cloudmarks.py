@@ -24,8 +24,6 @@ import datetime
 import pyotherside
 import json
 import traceback
-from pyfav import download_favicon
-from urllib.parse import urlparse
 
 
 def loadBookmarksFromServer(url, user, password, ignoreSSLErrors):
@@ -50,10 +48,8 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
     browser = 'org.sailfishos/sailfish-browser/'
     timestamp = str(datetime.datetime.now().timestamp())
     backup = sPath + '/bookmarks.json.bak' + timestamp
-    favicon_path = sPath + '/favicons'
 
     try:
-        _mkdir(favicon_path)
         bookmark_obj = json.loads(bookmarks)
         with open(home + path + browser + 'bookmarks.json', 'r') as f:
             exist_bookmarks = json.load(f)
@@ -64,8 +60,6 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
 
         for bm in bookmark_obj:
             if bm['url'] not in exist_urls:
-                curr_favicon_path = retrieve_favicon(bm['url'], favicon_path)
-                print(curr_favicon_path)
                 bookmark = {
                     'favicon': 'icon-launcher-bookmark',
                     'hasTouchIcon': False,
@@ -79,27 +73,3 @@ def exportBookmarkstoSailfishBrowser(bookmarks, sPath):
             json.dump(bookmark_list, f)
     except:
         pyotherside.send(traceback.print_exc())
-
-
-def retrieve_favicon(url, path):
-    o = urlparse(url)
-    savloc = download_favicon(url, file_prefix=o.netloc + '-', target_dir=path)
-    return savloc
-
-
-def get_encoded_favicon(favicon_location):
-    return ""
-
-
-def _mkdir(newdir):
-    if os.path.isdir(newdir):
-        pass
-    elif os.path.isfile(newdir):
-        raise OSError("a file with the same name as the desired "
-                      "dir, '%s', already exists." % newdir)
-    else:
-        head, tail = os.path.split(newdir)
-        if head and not os.path.isdir(head):
-            _mkdir(head)
-        if tail:
-            os.mkdir(newdir)
